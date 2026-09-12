@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0F172A">
+<meta name="description" content="Kelime Ezberle gizlilik politikası — uygulamanın hangi verileri sakladığı ve nerede sakladığı.">
+<title>Gizlilik Politikası – Kelime Ezberle</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="stylesheet" href="../css/vendor/nunito.css">
+<link rel="stylesheet" href="yasal.css">
+<script>
+  /* Uygulamadaki tema secimini yansit (localStorage: wm_theme).
+     Okunamazsa koyu tema varsayilan kalir. */
+  try { document.documentElement.dataset.theme = localStorage.getItem('wm_theme') || 'dark'; }
+  catch (e) { document.documentElement.dataset.theme = 'dark'; }
+</script>
+</head>
+<body>
+<div class="yasal-sarmal">
+  <div class="yasal-ust">
+    <a class="yasal-geri" href="../index.html">&larr; Uygulamaya dön</a>
+  </div>
+
+  <h1>Gizlilik Politikası</h1>
+  <p class="yasal-tarih">Son güncelleme: 13 Eylül 2026</p>
+
+  <div class="yasal-kutu">
+    <p><strong>Kısaca:</strong> Kelime Ezberle'nin bu sürümünde hesap yok, sunucu yok.
+    İlerlemen, XP'in ve quiz geçmişin <strong>yalnızca kendi cihazında</strong> saklanır.
+    Bize hiçbir veri ulaşmaz. Reklam, analitik ve takip kodu bulunmaz.</p>
+  </div>
+
+  <h2>1. Hangi verileri saklıyoruz?</h2>
+  <p>Uygulama, çalışabilmek için aşağıdaki bilgileri <strong>cihazının tarayıcı deposunda</strong>
+  tutar. Bu veriler cihazından çıkmaz; bizim erişimimiz yoktur.</p>
+
+  <div class="yasal-kaydir">
+  <table>
+    <tr><th>Ne saklanıyor</th><th>Ne işe yarıyor</th><th>Nerede</th></tr>
+    <tr><td>Öğrenilen kelimeler, doğru/yanlış geçmişi, tekrar takvimi</td><td>Hangi kelimeyi ne zaman tekrar etmen gerektiğini hesaplamak</td><td>IndexedDB</td></tr>
+    <tr><td>Günlük XP ve seri (streak) sayacın</td><td>İlerleme göstergeleri</td><td>IndexedDB + tarayıcı deposu</td></tr>
+    <tr><td>Tema tercihin (koyu/açık)</td><td>Uygulamayı seçtiğin görünümde açmak</td><td>Tarayıcı deposu</td></tr>
+    <tr><td>Karşılama ekranını görüp görmediğin</td><td>Karşılamayı her açılışta tekrar göstermemek</td><td>Tarayıcı deposu</td></tr>
+    <tr><td>Kelime listesi</td><td>İnternet olmadan da çalışabilmek</td><td>IndexedDB + çevrimdışı önbellek</td></tr>
+    <tr><td>Bildirim tercihlerin (açık/kapalı, hatırlatma saati)</td><td>Hatırlatmayı seçtiğin saatte kurmak</td><td>Tarayıcı deposu</td></tr>
+    <tr><td>Titreşim tercihin</td><td>Doğru/yanlış geri bildirimini ayarladığın gibi vermek</td><td>Tarayıcı deposu</td></tr>
+  </table>
+  </div>
+
+  <h2>1a. Bildirimler</h2>
+  <p>Mobil uygulama sürümünde günlük hatırlatma ve seri kurtarma bildirimi
+  gönderilebilir. Bunlar hakkında bilinmesi gerekenler:</p>
+  <ul>
+    <li><strong>Bildirimler cihazında üretilir.</strong> Sunucudan gönderilmez; bizim
+    tarafımızdan tetiklenmez. Uygulama, seçtiğin saati cihazın kendi zamanlayıcısına yazar.</li>
+    <li><strong>Cihaz kimliği toplanmaz.</strong> Push bildirim kullanılmadığı için
+    cihaz belirteci (push token) oluşturulmaz ve hiçbir yere iletilmez.</li>
+    <li><strong>İzinsiz bildirim gönderilmez.</strong> İzin, uygulama içinde açıkça
+    "Hatırlat" dediğin anda istenir; vermezsen bildirim kurulmaz.</li>
+    <li><strong>Her zaman kapatılabilir.</strong> Ayarlar → Bildirimler bölümünden veya
+    cihazının bildirim ayarlarından kapatabilirsin.</li>
+    <li><strong>Bildirim içeriği yalnızca kendi ilerlemenle ilgilidir</strong> (çalışma
+    hatırlatması, seri uyarısı). Reklam veya tanıtım bildirimi gönderilmez.</li>
+    <li><strong>Uygulamanın çalışması için gerekli değildir.</strong> Bildirimleri hiç
+    açmadan tüm özellikleri kullanabilirsin.</li>
+  </ul>
+
+  <h2>2. Bu sürümde <em>olmayan</em>lar</h2>
+  <p>Açık olmak adına, uygulamanın şu an yapmadığı şeyler:</p>
+  <ul>
+    <li><strong>Hesap ve giriş yok.</strong> Ad, e-posta, şifre veya telefon numarası istemiyoruz.</li>
+    <li><strong>Sunucuya veri gönderilmiyor.</strong> Uygulama çalışırken hiçbir dış adrese istek atmaz.</li>
+    <li><strong>Analitik ve takip yok.</strong> Google Analytics benzeri bir ölçüm aracı kullanılmıyor.</li>
+    <li><strong>Reklam yok.</strong> Reklam kimliği (advertising ID) okunmuyor.</li>
+    <li><strong>Takip çerezi yok.</strong> Uygulama çerez kullanmaz; yukarıdaki veriler tarayıcı deposunda tutulur.</li>
+    <li><strong>Konum, kamera, mikrofon, rehber erişimi yok.</strong></li>
+    <li><strong>Push bildirim yok.</strong> Bildirimler cihazda üretilir; sunucudan
+    gönderilen bildirim ve buna bağlı cihaz belirteci bulunmaz.</li>
+  </ul>
+
+  <h2>3. Verilerini nasıl silersin?</h2>
+  <p>Tüm veriler cihazında olduğu için silme işlemi tamamen senin kontrolünde:</p>
+  <ul>
+    <li><strong>Tarayıcıda:</strong> Tarayıcı ayarlarından bu sitenin site verilerini temizle.</li>
+    <li><strong>Mobil uygulamada:</strong> Uygulamayı kaldırmak tüm verileri siler.</li>
+  </ul>
+  <p>Silme işleminden sonra ilerlemen geri getirilemez — yedek bir kopyası bizde bulunmaz.</p>
+
+  <h2>4. Verilerin başka bir cihaza taşınmaz</h2>
+  <p>Hesap sistemi olmadığı için ilerlemen cihaza bağlıdır. Telefonunu değiştirirsen
+  ilerlemen yeni cihaza taşınmaz. Bu, gizliliğin lehine olan bilinçli bir tercihtir;
+  ileride isteğe bağlı bir hesap özelliği eklenirse bu metin güncellenecektir.</p>
+
+  <h2>5. Üçüncü taraf hizmetler</h2>
+  <p>Uygulama hiçbir üçüncü taraf hizmete istek atmaz. Kullandığımız yazı tipi (Nunito)
+  ve simge seti (Remix Icon) uygulamanın içine gömülüdür; bir içerik ağından (CDN)
+  indirilmez. Bu, hem çevrimdışı çalışmayı sağlar hem de üçüncü tarafların
+  IP adresini görmesini engeller.</p>
+  <p>Uygulamayı barındıran altyapı sağlayıcısı (Cloudflare Pages), tüm web sunucuları
+  gibi teknik erişim kayıtları tutabilir. Bu kayıtlar bizim tarafımızdan
+  görüntülenmez ve bir kullanıcıyla eşleştirilmez.</p>
+
+  <h2>6. Çocukların gizliliği</h2>
+  <p>Uygulama eğitim amaçlıdır ve her yaştan kullanıcıya uygundur. Hiç kimseden —
+  çocuklar dahil — kişisel veri toplamadığımız için, çocuklara ait veri de
+  toplanmamaktadır.</p>
+
+  <h2>7. Bu politika değişirse</h2>
+  <p>İleride hesap, bulut senkronizasyonu, abonelik veya reklam gibi özellikler
+  eklenirse bu metin <strong>özellik yayına alınmadan önce</strong> güncellenir ve
+  yukarıdaki tarih değiştirilir. Değişiklik geçmişi uygulamanın kaynak kod deposunda tutulur.</p>
+
+  <h2>8. İletişim</h2>
+  <p>Gizlilikle ilgili soruların için: <a href="mailto:mehmetmutlu0011@gmail.com">mehmetmutlu0011@gmail.com</a></p>
+
+  <div class="yasal-alt">
+    <p>Kelime Ezberle · Geliştirici: Mehmet Mutlu ·
+    <a href="kvkk.html">KVKK Aydınlatma Metni</a> ·
+    <a href="kullanim-sartlari.html">Kullanım Şartları</a></p>
+  </div>
+</div>
+</body>
+</html>

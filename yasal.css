@@ -1,0 +1,94 @@
+/* ============================================
+   Yasal sayfalar — ortak stil (FAZ 3B)
+   Oturum 3 (2026-09-12)
+
+   Uygulamanin tasarim belirteclerini tekrar tanimlar. style.css'i
+   yuklemiyoruz: o dosya uygulama kabugunun tamami (quiz, yol, nav) ve
+   bu sayfalarin hicbirine ihtiyaci yok — 645 satirlik bir dosyayi uc
+   metin sayfasi icin tasimak gereksiz.
+
+   Tema: uygulama secimi localStorage'da (wm_theme). Her sayfa <head>
+   icindeki kucuk betikle bunu okuyup data-theme'i isaretliyor.
+   ============================================ */
+
+:root, [data-theme="dark"] {
+  --bg-primary: #0F172A;
+  --bg-card: rgba(30, 41, 59, .95);
+  --border-color: rgba(148, 163, 184, .12);
+  --text-primary: #F1F5F9;
+  --text-secondary: #94A3B8;
+  --text-tertiary: #64748B;
+}
+[data-theme="light"] {
+  --bg-primary: #F0F2F5;
+  --bg-card: rgba(255, 255, 255, .97);
+  --border-color: rgba(0, 0, 0, .08);
+  --text-primary: #1A1A2E;
+  --text-secondary: #6B7280;
+  --text-tertiary: #9CA3AF;
+}
+:root { --green: #58CC02; --radius: 16px; }
+
+* , *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  padding: 0 20px 64px;
+}
+
+.yasal-sarmal { max-width: 720px; margin: 0 auto; }
+
+.yasal-ust {
+  display: flex; align-items: center; gap: 12px;
+  padding: 20px 0 24px;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 28px;
+}
+.yasal-geri {
+  display: inline-flex; align-items: center; gap: 6px;
+  color: var(--green); text-decoration: none;
+  font-weight: 800; font-size: 14px;
+}
+.yasal-geri:hover { text-decoration: underline; }
+
+h1 { font-size: 26px; font-weight: 900; line-height: 1.25; margin-bottom: 6px; }
+.yasal-tarih { color: var(--text-tertiary); font-size: 13px; font-weight: 600; margin-bottom: 28px; }
+
+h2 {
+  font-size: 18px; font-weight: 800;
+  margin: 32px 0 10px;
+  padding-top: 4px;
+}
+h3 { font-size: 15px; font-weight: 800; margin: 20px 0 6px; color: var(--text-primary); }
+
+p, li { color: var(--text-secondary); font-size: 15px; }
+p { margin-bottom: 12px; }
+ul, ol { margin: 0 0 14px 22px; }
+li { margin-bottom: 6px; }
+strong { color: var(--text-primary); font-weight: 800; }
+a { color: var(--green); }
+
+.yasal-kutu {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  margin: 20px 0;
+}
+.yasal-kutu p:last-child { margin-bottom: 0; }
+
+table { width: 100%; border-collapse: collapse; margin: 14px 0 18px; font-size: 14px; }
+th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--border-color); vertical-align: top; }
+th { color: var(--text-primary); font-weight: 800; }
+td { color: var(--text-secondary); }
+.yasal-kaydir { overflow-x: auto; }
+
+.yasal-alt {
+  margin-top: 40px; padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-tertiary); font-size: 13px;
+}
