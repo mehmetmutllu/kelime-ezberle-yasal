@@ -27,8 +27,12 @@
 
   <div class="yasal-kutu">
     <p><strong>Kısaca:</strong> Kelime Ezberle'nin bu sürümünde hesap yok, sunucu yok.
-    İlerlemen, XP'in ve quiz geçmişin <strong>yalnızca kendi cihazında</strong> saklanır.
-    Bize hiçbir veri ulaşmaz. Reklam, analitik ve takip kodu bulunmaz.</p>
+    İlerlemen, XP'in ve quiz geçmişin <strong>yalnızca kendi cihazında</strong> saklanır ve
+    bize ulaşmaz. Analitik ve takip kodu bulunmaz.</p>
+    <p>Mobil uygulama sürümü <strong>reklam gösterir</strong> (Google AdMob). Reklam
+    gösterimi için cihazının <strong>reklam kimliği</strong> Google ile paylaşılır — bu,
+    öğrenme verinden tamamen ayrı bir konudur ve ayrıntısı <a href="#reklamlar">§1b</a>'de
+    açıklanmıştır. Öğrenme verin hiçbir koşulda reklam sistemine verilmez.</p>
   </div>
 
   <h2>1. Hangi verileri saklıyoruz?</h2>
@@ -45,6 +49,8 @@
     <tr><td>Kelime listesi</td><td>İnternet olmadan da çalışabilmek</td><td>IndexedDB + çevrimdışı önbellek</td></tr>
     <tr><td>Bildirim tercihlerin (açık/kapalı, hatırlatma saati)</td><td>Hatırlatmayı seçtiğin saatte kurmak</td><td>Tarayıcı deposu</td></tr>
     <tr><td>Titreşim tercihin</td><td>Doğru/yanlış geri bildirimini ayarladığın gibi vermek</td><td>Tarayıcı deposu</td></tr>
+    <tr><td>Can (kalp) sayın ve son dolum zamanı</td><td>Quiz hakkının ne zaman yenileneceğini hesaplamak</td><td>Tarayıcı deposu</td></tr>
+    <tr><td>Reklam sayaçları (gün içinde kaç kez gösterildiği, açtığın pratik özellikleri, seri dondurma hakkın)</td><td>Reklam sıklık sınırlarını uygulamak ve kazandığın ödülü hatırlamak</td><td>Tarayıcı deposu</td></tr>
   </table>
   </div>
 
@@ -66,13 +72,52 @@
     açmadan tüm özellikleri kullanabilirsin.</li>
   </ul>
 
+  <h2 id="reklamlar">1b. Reklamlar</h2>
+  <p>Uygulamanın <strong>mobil uygulama sürümü</strong> Google AdMob aracılığıyla reklam
+  gösterir. Uygulama ücretsizdir ve geliştirme masrafları bu yolla karşılanır.
+  Web/tarayıcı sürümünde reklam gösterilmez.</p>
+  <ul>
+    <li><strong>Hangi reklamlar:</strong> yalnızca (a) senin bir düğmeye basarak başlattığın
+    ödüllü videolar (can kazanmak, seriyi dondurmak, bir pratik özelliğini gün boyu açmak) ve
+    (b) bir dersi bitirdikten sonra çıkan, <strong>atlanabilir</strong> ödüllü geçiş reklamı.
+    Banner reklam, açılış reklamı ve atlanamayan reklam <strong>kullanılmaz</strong>.</li>
+    <li><strong>Soruların arasında reklam çıkmaz.</strong> Quiz akışı hiçbir zaman
+    reklamla bölünmez.</li>
+    <li><strong>Reklam izlemek zorunlu değildir.</strong> Tüm öğrenme içeriği reklam
+    izlemeden kullanılabilir; reklamlar yalnızca ek haklar sağlar.</li>
+    <li><strong>Ne paylaşılıyor:</strong> reklam gösterimi için Google, cihazının
+    <strong>reklam kimliğini</strong> (Android Advertising ID / iOS IDFA), IP adresini,
+    cihaz ve uygulama bilgisini işler. Bu veriler Google tarafından toplanır;
+    geliştiriciye ulaşan tek şey birleştirilmiş (anonim) gelir ve gösterim istatistikleridir.</li>
+    <li><strong>Ne paylaşılMIYOR:</strong> öğrendiğin kelimeler, quiz sonuçların, XP'in,
+    serin ve diğer ilerleme verilerin reklam sistemine <strong>hiçbir şekilde</strong>
+    aktarılmaz. Bu veriler cihazından çıkmaz.</li>
+    <li><strong>Onay (AEA/Birleşik Krallık):</strong> Avrupa Ekonomik Alanı, İsviçre ve
+    Birleşik Krallık'taki kullanıcılara, ilk açılışta Google'ın onay formu gösterilir.
+    Verdiğin cevabı daha sonra <em>Ayarlar → Reklam Gizlilik Tercihleri</em>'nden
+    değiştirebilirsin. Onay vermezsen reklamlar
+    <strong>kişiselleştirilmemiş</strong> olarak gösterilir.</li>
+    <li><strong>Diğer ülkeler:</strong> cihaz ayarlarından reklam kişiselleştirmesini
+    kapatabilir veya reklam kimliğini sıfırlayabilirsin
+    (Android: <em>Ayarlar → Google → Reklamlar</em>, iOS: <em>Ayarlar → Gizlilik ve
+    Güvenlik → İzleme</em>).</li>
+    <li><strong>Reklam içeriği:</strong> uygulama her yaşa uygun olduğu için reklam
+    içerik derecesi <strong>"Genel İzleyici"</strong> ile sınırlandırılmıştır.</li>
+    <li><strong>Google'ın veri işleme politikası:</strong>
+    <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">policies.google.com/technologies/partner-sites</a></li>
+  </ul>
+
   <h2>2. Bu sürümde <em>olmayan</em>lar</h2>
   <p>Açık olmak adına, uygulamanın şu an yapmadığı şeyler:</p>
   <ul>
     <li><strong>Hesap ve giriş yok.</strong> Ad, e-posta, şifre veya telefon numarası istemiyoruz.</li>
-    <li><strong>Sunucuya veri gönderilmiyor.</strong> Uygulama çalışırken hiçbir dış adrese istek atmaz.</li>
-    <li><strong>Analitik ve takip yok.</strong> Google Analytics benzeri bir ölçüm aracı kullanılmıyor.</li>
-    <li><strong>Reklam yok.</strong> Reklam kimliği (advertising ID) okunmuyor.</li>
+    <li><strong>Öğrenme verin sunucuya gönderilmiyor.</strong> İlerlemen, quiz sonuçların ve
+    XP'in hiçbir sunucuya iletilmez. Uygulamanın kurduğu tek dış bağlantı, mobil sürümdeki
+    <a href="#reklamlar">reklam gösterimi</a> içindir.</li>
+    <li><strong>Analitik ve takip yok.</strong> Google Analytics benzeri bir ölçüm aracı
+    kullanılmıyor; hangi ekranı açtığın, ne kadar kaldığın ölçülmüyor.</li>
+    <li><strong>Kişiselleştirilmiş içerik profili çıkarılmıyor.</strong> Reklamlar dışında
+    senin hakkında hiçbir profil oluşturulmuyor.</li>
     <li><strong>Takip çerezi yok.</strong> Uygulama çerez kullanmaz; yukarıdaki veriler tarayıcı deposunda tutulur.</li>
     <li><strong>Konum, kamera, mikrofon, rehber erişimi yok.</strong></li>
     <li><strong>Push bildirim yok.</strong> Bildirimler cihazda üretilir; sunucudan
@@ -93,7 +138,11 @@
   ileride isteğe bağlı bir hesap özelliği eklenirse bu metin güncellenecektir.</p>
 
   <h2>5. Üçüncü taraf hizmetler</h2>
-  <p>Uygulama hiçbir üçüncü taraf hizmete istek atmaz. Kullandığımız yazı tipi (Nunito)
+  <p><strong>Google AdMob</strong> (Google Ireland Limited / Google LLC) — yalnızca mobil
+  uygulama sürümünde, reklam gösterimi için. İşlediği veriler ve onay mekanizması
+  <a href="#reklamlar">§1b</a>'de açıklanmıştır. Bu, uygulamanın kullandığı
+  <strong>tek</strong> üçüncü taraf hizmettir.</p>
+  <p>Bunun dışında uygulama üçüncü taraf hizmete istek atmaz. Kullandığımız yazı tipi (Nunito)
   ve simge seti (Remix Icon) uygulamanın içine gömülüdür; bir içerik ağından (CDN)
   indirilmez. Bu, hem çevrimdışı çalışmayı sağlar hem de üçüncü tarafların
   IP adresini görmesini engeller.</p>
@@ -102,9 +151,12 @@
   görüntülenmez ve bir kullanıcıyla eşleştirilmez.</p>
 
   <h2>6. Çocukların gizliliği</h2>
-  <p>Uygulama eğitim amaçlıdır ve her yaştan kullanıcıya uygundur. Hiç kimseden —
-  çocuklar dahil — kişisel veri toplamadığımız için, çocuklara ait veri de
-  toplanmamaktadır.</p>
+  <p>Uygulama eğitim amaçlıdır ve her yaştan kullanıcıya uygundur; ancak
+  <strong>özellikle 13 yaş altına yönelik değildir</strong>. Geliştirici olarak hiç kimseden
+  — çocuklar dahil — kişisel veri toplamıyoruz.</p>
+  <p>Reklam tarafında, gösterilecek reklamların içerik derecesi "Genel İzleyici" ile
+  sınırlandırılmıştır. Çocuğunun reklam görmesini istemiyorsan cihazın aile denetimi
+  ayarlarını kullanabilirsin.</p>
 
   <h2>7. Bu politika değişirse</h2>
   <p>İleride hesap, bulut senkronizasyonu, abonelik veya reklam gibi özellikler
