@@ -27,7 +27,7 @@
   --text-secondary: #6B7280;
   --text-tertiary: #9CA3AF;
 }
-:root { --green: #58CC02; --radius: 16px; }
+:root { --green: #4FD916; --radius: 16px; }
 
 * , *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -37,7 +37,16 @@ body {
   color: var(--text-primary);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
-  padding: 0 20px 64px;
+  /* Guvenli alan: bu sayfalar SPA kabugunun DISINDA, style.css'i
+     yuklemiyorlar; yani uygulamadaki centik duzeltmesi buraya ulasmiyordu ve
+     baslik S24'te delikli ekranin altinda kaliyordu (A4).
+     env(...) centiksiz cihazda ve tarayicida 0 doner, tek kural her yerde
+     dogru calisir. Yatay insetler katlanabilir/centikli cihazlarin yan
+     bosluklari icin. */
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-left: calc(20px + env(safe-area-inset-left, 0px));
+  padding-right: calc(20px + env(safe-area-inset-right, 0px));
+  padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px));
 }
 
 .yasal-sarmal { max-width: 720px; margin: 0 auto; }

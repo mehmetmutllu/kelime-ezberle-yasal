@@ -10,8 +10,19 @@
 <link rel="stylesheet" href="../css/vendor/nunito.css">
 <link rel="stylesheet" href="yasal.css">
 <script>
-  try { document.documentElement.dataset.theme = localStorage.getItem('wm_theme') || 'dark'; }
-  catch (e) { document.documentElement.dataset.theme = 'dark'; }
+  /* Uygulamadaki tema secimini yansit (localStorage: wm_theme).
+     Secim YOKSA cihazin temasina uyulur — sabit 'dark' varsayimi, telefonu
+     acik temada olan kullaniciya koyu sayfa aciyordu (A5/A6 ile ayni karar).
+     Okunamazsa koyu tema varsayilan kalir. */
+  try {
+    var tema = localStorage.getItem('wm_theme');
+    if (tema !== 'light' && tema !== 'dark') {
+      tema = (window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark';
+    }
+    document.documentElement.dataset.theme = tema;
+    var m = document.querySelector('meta[name="theme-color"]');
+    if (m) m.setAttribute('content', tema === 'light' ? '#F0F2F5' : '#0F172A');
+  } catch (e) { document.documentElement.dataset.theme = 'dark'; }
 </script>
 </head>
 <body>
@@ -21,7 +32,7 @@
   </div>
 
   <h1>Kullanım Şartları</h1>
-  <p class="yasal-tarih">Son güncelleme: 12 Eylül 2026</p>
+  <p class="yasal-tarih">Son güncelleme: 1 Ekim 2026</p>
 
   <p>Kelime Ezberle'yi kullanarak aşağıdaki şartları kabul etmiş olursun.
   Şartları kabul etmiyorsan uygulamayı kullanmamalısın.</p>
@@ -92,9 +103,29 @@
   </ul>
 
   <h2>8a. Ücretli özellikler</h2>
-  <p>Uygulamanın mevcut sürümünde ücretli özellik, abonelik veya uygulama içi satın alma
-  <strong>bulunmamaktadır</strong>. İleride eklenmesi hâlinde ücretlendirme, yenileme ve
-  iptal koşulları bu metne eklenecek ve satın alma ekranında açıkça gösterilecektir.</p>
+  <p>Uygulamanın tüm öğrenme içeriği ücretsizdir. İsteğe bağlı <strong>Premium</strong>
+  abonelik; reklamsız kullanım, sınırsız enerji ve ek pratik/analiz özellikleri sunar.</p>
+  <ul>
+    <li><strong>Planlar:</strong> aylık ve yıllık. Güncel fiyat, satın alma ekranında ve
+    mağazada (App Store / Google Play) yerel para biriminle gösterilir.</li>
+    <li><strong>Ücretsiz deneme:</strong> yıllık planda sunulduğunda deneme süresi satın alma
+    ekranında yazar. Deneme bitmeden iptal edersen ücret alınmaz; iptal etmezsen deneme
+    sonunda yıllık ücret tahsil edilir.</li>
+    <li><strong>Otomatik yenileme:</strong> abonelik, dönem bitiminden en az 24 saat önce
+    iptal edilmedikçe aynı süre ve o anki fiyatla otomatik yenilenir. Ödeme, satın almayı
+    onayladığında mağaza hesabından tahsil edilir.</li>
+    <li><strong>İptal:</strong> aboneliği istediğin zaman mağaza hesabının abonelik
+    ayarlarından iptal edebilirsin (iPhone: Ayarlar → adın → Abonelikler). İptal, içinde
+    bulunduğun dönemin sonunda geçerli olur; o güne kadar Premium açık kalır. Uygulamayı
+    silmek aboneliği iptal etmez.</li>
+    <li><strong>İade:</strong> ödemeleri mağaza tahsil ettiği için iade talepleri mağazanın
+    kendi kurallarına tabidir (App Store için reportaproblem.apple.com).</li>
+    <li><strong>Geri yükleme:</strong> hesap sistemi olmadığından Premium, mağaza hesabına
+    bağlıdır. Yeni cihazda aynı mağaza hesabıyla "Satın alımları geri yükle" demen yeterlidir.</li>
+  </ul>
+  <p>App Store üzerinden yapılan satın almalarda, bu şartlara ek olarak Apple'ın Standart
+  Son Kullanıcı Lisans Sözleşmesi (EULA) geçerlidir:
+  <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">apple.com/legal/internet-services/itunes/dev/stdeula</a>.</p>
 
   <h2>9. Şartlarda değişiklik</h2>
   <p>Bu şartlar güncellenebilir. Güncelleme hâlinde yukarıdaki tarih değiştirilir.

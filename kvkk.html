@@ -10,8 +10,19 @@
 <link rel="stylesheet" href="../css/vendor/nunito.css">
 <link rel="stylesheet" href="yasal.css">
 <script>
-  try { document.documentElement.dataset.theme = localStorage.getItem('wm_theme') || 'dark'; }
-  catch (e) { document.documentElement.dataset.theme = 'dark'; }
+  /* Uygulamadaki tema secimini yansit (localStorage: wm_theme).
+     Secim YOKSA cihazin temasina uyulur — sabit 'dark' varsayimi, telefonu
+     acik temada olan kullaniciya koyu sayfa aciyordu (A5/A6 ile ayni karar).
+     Okunamazsa koyu tema varsayilan kalir. */
+  try {
+    var tema = localStorage.getItem('wm_theme');
+    if (tema !== 'light' && tema !== 'dark') {
+      tema = (window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark';
+    }
+    document.documentElement.dataset.theme = tema;
+    var m = document.querySelector('meta[name="theme-color"]');
+    if (m) m.setAttribute('content', tema === 'light' ? '#F0F2F5' : '#0F172A');
+  } catch (e) { document.documentElement.dataset.theme = 'dark'; }
 </script>
 </head>
 <body>
@@ -21,7 +32,7 @@
   </div>
 
   <h1>KVKK Aydınlatma Metni</h1>
-  <p class="yasal-tarih">6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında · Son güncelleme: 13 Eylül 2026</p>
+  <p class="yasal-tarih">6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında · Son güncelleme: 24 Eylül 2026</p>
 
   <div class="yasal-kutu">
     <p><strong>Özet:</strong> Kelime Ezberle hesap açmanı istemez ve öğrenme verini kendi
@@ -52,6 +63,12 @@
   oluşturulmaz, kaydedilmez ve aktarılmaz. Bildirim tercihin ve seçtiğin saat yalnızca
   cihazının yerel deposunda tutulur. İzni istediğin zaman uygulama içinden veya cihaz
   ayarlarından geri alabilirsin.</p>
+
+  <p><strong>Hata bildirimi:</strong> bir kelimedeki hatayı bildirmeyi seçersen yalnızca
+  kelime, hata türü, yazdığın not ve teknik bilgiler (uygulama sürümü, platform, zaman)
+  Google E-Tablolar'da tutulan bir tabloya iletilir. Kimlik bilgisi gönderilmez; bildirim
+  seninle eşleştirilemez. Not alanına kişisel bilgi yazmamanı rica ederiz. Ayrıntı için
+  <a href="gizlilik.html#hata-bildirimi">Gizlilik Politikası §1c</a>.</p>
 
   <h2>2a. Reklam gösterimi kapsamında işlenen veri</h2>
   <p>Mobil uygulama sürümünde, uygulamanın ücretsiz kalabilmesi için Google AdMob
@@ -125,6 +142,8 @@
   kişiselleştirilmiş reklam bakımından <strong>açık rızaya</strong> dayanır; rıza
   verilmediğinde reklamlar kişiselleştirilmemiş olarak gösterilir. Google'ın veri işleme
   esasları: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">policies.google.com/technologies/partner-sites</a></p>
+  <p><strong>Hata bildirimleri:</strong> gönderdiğin hata bildirimleri (§2) kimlik bilgisi
+  içermez ve Google'ın yurt dışındaki sunucularında tutulan bir tabloya yazılır.</p>
   <p><strong>Bunun dışında aktarım yoktur.</strong> Öğrenme verin, quiz sonuçların ve XP'in
   hiçbir üçüncü kişiye, yurt içinde veya yurt dışında aktarılmaz; bu veriler cihazından çıkmaz.
   Hesap özellikleri devreye alınırsa bu bölüm, özellik yayına girmeden önce güncellenecektir.</p>

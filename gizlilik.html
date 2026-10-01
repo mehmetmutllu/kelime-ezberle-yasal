@@ -11,9 +11,18 @@
 <link rel="stylesheet" href="yasal.css">
 <script>
   /* Uygulamadaki tema secimini yansit (localStorage: wm_theme).
+     Secim YOKSA cihazin temasina uyulur — sabit 'dark' varsayimi, telefonu
+     acik temada olan kullaniciya koyu sayfa aciyordu (A5/A6 ile ayni karar).
      Okunamazsa koyu tema varsayilan kalir. */
-  try { document.documentElement.dataset.theme = localStorage.getItem('wm_theme') || 'dark'; }
-  catch (e) { document.documentElement.dataset.theme = 'dark'; }
+  try {
+    var tema = localStorage.getItem('wm_theme');
+    if (tema !== 'light' && tema !== 'dark') {
+      tema = (window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark';
+    }
+    document.documentElement.dataset.theme = tema;
+    var m = document.querySelector('meta[name="theme-color"]');
+    if (m) m.setAttribute('content', tema === 'light' ? '#F0F2F5' : '#0F172A');
+  } catch (e) { document.documentElement.dataset.theme = 'dark'; }
 </script>
 </head>
 <body>
@@ -23,12 +32,13 @@
   </div>
 
   <h1>Gizlilik Politikası</h1>
-  <p class="yasal-tarih">Son güncelleme: 13 Eylül 2026</p>
+  <p class="yasal-tarih">Son güncelleme: 1 Ekim 2026</p>
 
   <div class="yasal-kutu">
     <p><strong>Kısaca:</strong> Kelime Ezberle'nin bu sürümünde hesap yok, sunucu yok.
     İlerlemen, XP'in ve quiz geçmişin <strong>yalnızca kendi cihazında</strong> saklanır ve
-    bize ulaşmaz. Analitik ve takip kodu bulunmaz.</p>
+    bize ulaşmaz. Analitik ve takip kodu bulunmaz. Bir kelimede hata bildirmeyi
+    seçersen yalnızca o kelime ve yazdığın not gönderilir (<a href="#hata-bildirimi">§1c</a>).</p>
     <p>Mobil uygulama sürümü <strong>reklam gösterir</strong> (Google AdMob). Reklam
     gösterimi için cihazının <strong>reklam kimliği</strong> Google ile paylaşılır — bu,
     öğrenme verinden tamamen ayrı bir konudur ve ayrıntısı <a href="#reklamlar">§1b</a>'de
@@ -50,6 +60,7 @@
     <tr><td>Bildirim tercihlerin (açık/kapalı, hatırlatma saati)</td><td>Hatırlatmayı seçtiğin saatte kurmak</td><td>Tarayıcı deposu</td></tr>
     <tr><td>Titreşim tercihin</td><td>Doğru/yanlış geri bildirimini ayarladığın gibi vermek</td><td>Tarayıcı deposu</td></tr>
     <tr><td>Can (kalp) sayın ve son dolum zamanı</td><td>Quiz hakkının ne zaman yenileneceğini hesaplamak</td><td>Tarayıcı deposu</td></tr>
+    <tr><td>Henüz gönderilmemiş hata bildirimlerin</td><td>İnternet bağlantısı gelince göndermek (<a href="#hata-bildirimi">§1c</a>)</td><td>Tarayıcı deposu</td></tr>
     <tr><td>Reklam sayaçları (gün içinde kaç kez gösterildiği, açtığın pratik özellikleri, seri dondurma hakkın)</td><td>Reklam sıklık sınırlarını uygulamak ve kazandığın ödülü hatırlamak</td><td>Tarayıcı deposu</td></tr>
   </table>
   </div>
@@ -78,7 +89,7 @@
   Web/tarayıcı sürümünde reklam gösterilmez.</p>
   <ul>
     <li><strong>Hangi reklamlar:</strong> yalnızca (a) senin bir düğmeye basarak başlattığın
-    ödüllü videolar (can kazanmak, seriyi dondurmak, bir pratik özelliğini gün boyu açmak) ve
+    ödüllü videolar (enerji kazanmak, seriyi dondurmak) ve
     (b) bir dersi bitirdikten sonra çıkan, <strong>atlanabilir</strong> ödüllü geçiş reklamı.
     Banner reklam, açılış reklamı ve atlanamayan reklam <strong>kullanılmaz</strong>.</li>
     <li><strong>Soruların arasında reklam çıkmaz.</strong> Quiz akışı hiçbir zaman
@@ -107,13 +118,52 @@
     <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">policies.google.com/technologies/partner-sites</a></li>
   </ul>
 
+  <h2 id="hata-bildirimi">1c. Hata bildirimi</h2>
+  <p>Bir kelimenin çevirisinde, örnek cümlesinde veya yazımında hata görürsen uygulamanın
+  içinden bize bildirebilirsin (bayrak / "Bildir" düğmesi). Bu tamamen isteğe bağlıdır:
+  sen göndermedikçe hiçbir şey iletilmez.</p>
+  <ul>
+    <li><strong>Ne gönderiliyor:</strong> bildirdiğin kelime (numarası, kendisi ve anlamı),
+    seçtiğin hata türü, yazdıysan notun, bildirimi hangi ekrandan yaptığın, quiz ekranından
+    bildirdiysen soru türü ile doğru ve seçtiğin cevap, uygulama sürümü, platform
+    (Android / iOS / web) ve gönderim zamanı.</li>
+    <li><strong>Ne gönderilMİYOR:</strong> ad, e-posta, hesap, cihaz kimliği, reklam kimliği
+    ve ilerleme verin. Bildirim seninle eşleştirilemez.</li>
+    <li><strong>Nereye gidiyor:</strong> geliştiricinin Google E-Tablolar'da tuttuğu bir
+    tabloya (Google Apps Script aracılığıyla). Google, isteği karşılarken teknik olarak
+    IP adresini görür; bu bilgi tabloya yazılmaz.</li>
+    <li><strong>Ne için kullanılıyor:</strong> yalnızca kelime içeriğini düzeltmek için.
+    Başka bir amaçla işlenmez, kimseyle paylaşılmaz.</li>
+    <li><strong>Notuna kişisel bilgi yazma.</strong> Not alanı serbest metindir; ad, telefon
+    gibi bilgileri buraya yazmamanı rica ederiz.</li>
+    <li><strong>İnternet yoksa</strong> bildirim cihazında bekler, bağlantı gelince gönderilir.</li>
+  </ul>
+
+  <h2 id="premium">1d. Premium abonelik</h2>
+  <p>Premium'u satın alırsan ödeme <strong>tamamen mağaza (App Store / Google Play)
+  tarafından</strong> alınır; kart bilgilerin bize veya uygulamaya hiç gelmez.</p>
+  <ul>
+    <li><strong>Ne paylaşılıyor:</strong> aboneliğinin geçerli olup olmadığını doğrulamak için
+    uygulama, abonelik altyapısı <strong>RevenueCat</strong>'e rastgele üretilmiş anonim bir
+    kullanıcı kimliği, mağazanın satın alma kaydını, cihaz/işletim sistemi bilgisini ve
+    IP adresini iletir. Ad, e-posta veya telefon gönderilmez.</li>
+    <li><strong>Ne için:</strong> yalnızca Premium'u açmak, yenilemeyi/iptali izlemek ve
+    "Satın alımları geri yükle" özelliği için. Reklam veya profil çıkarma amacıyla kullanılmaz.</li>
+    <li>Premium almayan kullanıcılarda bu doğrulama yalnızca mevcut bir abonelik olup
+    olmadığını kontrol etmekle sınırlıdır.</li>
+    <li>Premium aboneler reklam görmez; bu durumda <a href="#reklamlar">§1b</a>'deki reklam
+    verisi paylaşımı da olmaz.</li>
+  </ul>
+
   <h2>2. Bu sürümde <em>olmayan</em>lar</h2>
   <p>Açık olmak adına, uygulamanın şu an yapmadığı şeyler:</p>
   <ul>
     <li><strong>Hesap ve giriş yok.</strong> Ad, e-posta, şifre veya telefon numarası istemiyoruz.</li>
     <li><strong>Öğrenme verin sunucuya gönderilmiyor.</strong> İlerlemen, quiz sonuçların ve
-    XP'in hiçbir sunucuya iletilmez. Uygulamanın kurduğu tek dış bağlantı, mobil sürümdeki
-    <a href="#reklamlar">reklam gösterimi</a> içindir.</li>
+    XP'in hiçbir sunucuya iletilmez. Uygulamanın kurduğu dış bağlantılar yalnızca mobil
+    sürümdeki <a href="#reklamlar">reklam gösterimi</a>,
+    <a href="#premium">Premium abonelik doğrulaması</a> ve senin gönderdiğin
+    <a href="#hata-bildirimi">hata bildirimleri</a> içindir.</li>
     <li><strong>Analitik ve takip yok.</strong> Google Analytics benzeri bir ölçüm aracı
     kullanılmıyor; hangi ekranı açtığın, ne kadar kaldığın ölçülmüyor.</li>
     <li><strong>Kişiselleştirilmiş içerik profili çıkarılmıyor.</strong> Reklamlar dışında
@@ -140,9 +190,13 @@
   <h2>5. Üçüncü taraf hizmetler</h2>
   <p><strong>Google AdMob</strong> (Google Ireland Limited / Google LLC) — yalnızca mobil
   uygulama sürümünde, reklam gösterimi için. İşlediği veriler ve onay mekanizması
-  <a href="#reklamlar">§1b</a>'de açıklanmıştır. Bu, uygulamanın kullandığı
-  <strong>tek</strong> üçüncü taraf hizmettir.</p>
-  <p>Bunun dışında uygulama üçüncü taraf hizmete istek atmaz. Kullandığımız yazı tipi (Nunito)
+  <a href="#reklamlar">§1b</a>'de açıklanmıştır.</p>
+  <p><strong>Google E-Tablolar / Apps Script</strong> (Google) — yalnızca bir hata
+  bildirdiğinde. Gönderilen bilgiler <a href="#hata-bildirimi">§1c</a>'de açıklanmıştır.</p>
+  <p><strong>RevenueCat</strong> (RevenueCat, Inc.) ve <strong>Apple App Store / Google Play</strong>
+  — yalnızca mobil uygulamada, Premium abonelik satın alma ve doğrulaması için.
+  Ayrıntı <a href="#premium">§1d</a>'de.</p>
+  <p>Bunlar dışında uygulama üçüncü taraf hizmete istek atmaz. Kullandığımız yazı tipi (Nunito)
   ve simge seti (Remix Icon) uygulamanın içine gömülüdür; bir içerik ağından (CDN)
   indirilmez. Bu, hem çevrimdışı çalışmayı sağlar hem de üçüncü tarafların
   IP adresini görmesini engeller.</p>
