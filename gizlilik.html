@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#0F172A">
-<meta name="description" content="Kelime Ezberle gizlilik politikası — uygulamanın hangi verileri sakladığı ve nerede sakladığı.">
+<meta name="description" content="Kelime Ezberle gizlilik politikası — hangi verilerin saklandığı, kimlerin işlediği ve nasıl silebileceğin.">
 <title>Gizlilik Politikası – Kelime Ezberle</title>
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="stylesheet" href="../css/vendor/nunito.css">
@@ -31,199 +31,276 @@
     <a class="yasal-geri" href="../index.html">&larr; Uygulamaya dön</a>
   </div>
 
+
   <h1>Gizlilik Politikası</h1>
-  <p class="yasal-tarih">Son güncelleme: 1 Ekim 2026</p>
+  <p class="yasal-tarih">Son güncelleme: 12 Ekim 2026</p>
 
   <div class="yasal-kutu">
-    <p><strong>Kısaca:</strong> Kelime Ezberle'nin bu sürümünde hesap yok, sunucu yok.
-    İlerlemen, XP'in ve quiz geçmişin <strong>yalnızca kendi cihazında</strong> saklanır ve
-    bize ulaşmaz. Analitik ve takip kodu bulunmaz. Bir kelimede hata bildirmeyi
-    seçersen yalnızca o kelime ve yazdığın not gönderilir (<a href="#hata-bildirimi">§1c</a>).</p>
-    <p>Mobil uygulama sürümü <strong>reklam gösterir</strong> (Google AdMob). Reklam
-    gösterimi için cihazının <strong>reklam kimliği</strong> Google ile paylaşılır — bu,
-    öğrenme verinden tamamen ayrı bir konudur ve ayrıntısı <a href="#reklamlar">§1b</a>'de
-    açıklanmıştır. Öğrenme verin hiçbir koşulda reklam sistemine verilmez.</p>
+    <p><strong>Kısaca:</strong> Kelime Ezberle'yi <strong>hesap açmadan</strong> kullanabilirsin.
+    Hesap açmazsan ilerlemen yalnızca kendi telefonunda kalır, bize ulaşmaz.</p>
+    <p>İstersen <strong>Apple ya da Google hesabınla giriş yapabilirsin.</strong> Giriş yaparsan
+    e-posta adresin, adın ve öğrenme ilerlemen hesabına kaydedilir; böylece telefon değiştirsen de
+    kaldığın yerden devam edersin. Bu veriler Google'ın Firebase hizmetinde, Almanya'daki
+    (Frankfurt) sunucularda tutulur. <strong>Premium almak için hesap gerekir.</strong></p>
+    <p>Mobil uygulama <strong>reklam gösterir</strong> (Google AdMob). Reklam gösterilirken Google
+    cihazının reklam kimliğini, IP adresini, cihaz ve uygulama bilgisini işler. Öğrenme verin,
+    e-postan ve hesap bilgilerin reklam amacıyla <strong>paylaşılmaz</strong>. Analitik ve takip aracı kullanmıyoruz, verini satmıyoruz.</p>
+    <p>Hesabını istediğin an uygulamanın içinden silebilirsin: <strong>Profil → Hesap → Hesabı sil</strong>.</p>
   </div>
 
-  <h2>1. Hangi verileri saklıyoruz?</h2>
-  <p>Uygulama, çalışabilmek için aşağıdaki bilgileri <strong>cihazının tarayıcı deposunda</strong>
-  tutar. Bu veriler cihazından çıkmaz; bizim erişimimiz yoktur.</p>
+  <h2 id="hesapsiz">1. Hesap açmadan kullanım</h2>
+  <p>Giriş yapmadan kullanırken uygulama aşağıdaki bilgileri <strong>yalnızca telefonunun
+  (ya da tarayıcının) deposunda</strong> tutar. Bu veriler cihazından çıkmaz; bizim erişimimiz yoktur.</p>
 
   <div class="yasal-kaydir">
   <table>
-    <tr><th>Ne saklanıyor</th><th>Ne işe yarıyor</th><th>Nerede</th></tr>
-    <tr><td>Öğrenilen kelimeler, doğru/yanlış geçmişi, tekrar takvimi</td><td>Hangi kelimeyi ne zaman tekrar etmen gerektiğini hesaplamak</td><td>IndexedDB</td></tr>
-    <tr><td>Günlük XP ve seri (streak) sayacın</td><td>İlerleme göstergeleri</td><td>IndexedDB + tarayıcı deposu</td></tr>
-    <tr><td>Tema tercihin (koyu/açık)</td><td>Uygulamayı seçtiğin görünümde açmak</td><td>Tarayıcı deposu</td></tr>
-    <tr><td>Karşılama ekranını görüp görmediğin</td><td>Karşılamayı her açılışta tekrar göstermemek</td><td>Tarayıcı deposu</td></tr>
-    <tr><td>Kelime listesi</td><td>İnternet olmadan da çalışabilmek</td><td>IndexedDB + çevrimdışı önbellek</td></tr>
-    <tr><td>Bildirim tercihlerin (açık/kapalı, hatırlatma saati)</td><td>Hatırlatmayı seçtiğin saatte kurmak</td><td>Tarayıcı deposu</td></tr>
-    <tr><td>Titreşim tercihin</td><td>Doğru/yanlış geri bildirimini ayarladığın gibi vermek</td><td>Tarayıcı deposu</td></tr>
-    <tr><td>Can (kalp) sayın ve son dolum zamanı</td><td>Quiz hakkının ne zaman yenileneceğini hesaplamak</td><td>Tarayıcı deposu</td></tr>
-    <tr><td>Henüz gönderilmemiş hata bildirimlerin</td><td>İnternet bağlantısı gelince göndermek (<a href="#hata-bildirimi">§1c</a>)</td><td>Tarayıcı deposu</td></tr>
-    <tr><td>Reklam sayaçları (gün içinde kaç kez gösterildiği, açtığın pratik özellikleri, seri dondurma hakkın)</td><td>Reklam sıklık sınırlarını uygulamak ve kazandığın ödülü hatırlamak</td><td>Tarayıcı deposu</td></tr>
+    <tr><th>Ne saklanıyor</th><th>Ne işe yarıyor</th></tr>
+    <tr><td>Öğrendiğin kelimeler, doğru/yanlış geçmişi, tekrar takvimi</td><td>Hangi kelimeyi ne zaman tekrar etmen gerektiğini hesaplamak</td></tr>
+    <tr><td>Ders ilerlemen, günlük XP'in ve serin (streak)</td><td>İlerleme göstergeleri</td></tr>
+    <tr><td>Kelimelerim listen</td><td>Kaydettiğin kelimeleri sana göstermek</td></tr>
+    <tr><td>Seviyen, tema, titreşim ve bildirim tercihlerin</td><td>Uygulamayı seçtiğin gibi açmak, hatırlatmayı seçtiğin saatte kurmak</td></tr>
+    <tr><td>Enerji durumun ve son dolum zamanı</td><td>Enerjinin ne zaman dolacağını hesaplamak</td></tr>
+    <tr><td>Bu ay kullandığın seri koruması ve günlük tekrar sayın</td><td>Ücretsiz sürümün sınırlarını uygulamak</td></tr>
+    <tr><td>Reklam sayaçları (gün içinde kaç reklam gösterildiği)</td><td>Reklam sıklık sınırlarını uygulamak</td></tr>
+    <tr><td>Henüz gönderilmemiş hata bildirimlerin</td><td>İnternet gelince göndermek (<a href="#hata-bildirimi">§5</a>)</td></tr>
+    <tr><td>Kelime listesi</td><td>İnternet olmadan da çalışabilmek</td></tr>
+  </table>
+  </div>
+  <p>Bu verileri silmek için uygulamayı kaldırman (tarayıcıda site verilerini temizlemen) ya da
+  uygulamadaki <strong>"İlerlemeyi sıfırla"</strong> seçeneğini kullanman yeterli. Hesap
+  açmadıysan bizde bir yedeği yoktur; silinen ilerleme geri getirilemez.</p>
+
+  <h2 id="hesap">2. Hesap açarsan (isteğe bağlı)</h2>
+  <p>Hesap yalnızca mobil uygulamada (Android ve iPhone) açılabilir ve
+  <strong>Apple ile giriş</strong> ya da <strong>Google ile giriş</strong> kullanılır.
+  Ayrı bir şifre oluşturmazsın; Apple ya da Google şifreni biz hiçbir zaman görmeyiz.</p>
+
+  <h3>Hangi bilgiler kaydedilir?</h3>
+  <div class="yasal-kaydir">
+  <table>
+    <tr><th>Bilgi</th><th>Nereden gelir</th><th>Ne işe yarar</th></tr>
+    <tr><td>Kullanıcı kimliği (rastgele üretilmiş bir hesap numarası)</td><td>Firebase, hesabı açarken üretir</td><td>Hesabını ve verilerini tanımak</td></tr>
+    <tr><td>E-posta adresi</td><td>Apple ya da Google. Apple ile girerken e-postanı gizlemeyi seçersen Apple'ın verdiği yönlendirme adresi gelir</td><td>Hesabını tanımak, aynı e-postayla ikinci bir hesap açılmasını önlemek, silme gibi taleplerinde seni doğrulamak</td></tr>
+    <tr><td>Ad</td><td>Apple ya da Google (Apple yalnızca ilk girişte verir; gelmezse "Öğrenci" yazar). Profilden değiştirebilirsin</td><td>Profilinde sana göstermek. Adın <strong>yalnızca sana</strong> görünür</td></tr>
+    <tr><td>Giriş yöntemi, hesabın açıldığı ve son giriş yaptığın zaman, platform (Android / iOS)</td><td>Uygulama</td><td>Hesabın düzgün çalışması ve sorun çözmek</td></tr>
+    <tr><td>Öğrenme ilerlemen: ders ve bölüm sonuçları, günlük XP, seri ve seri koruması kayıtları, seviyen, tekrar takvimi, cevap geçmişi (hangi kelime, hangi soru türü, doğru mu, ne zaman)</td><td>Uygulamayı kullanırken</td><td>İlerlemeni yedeklemek ve başka telefonda kaldığın yerden devam etmeni sağlamak</td></tr>
+    <tr><td>Kelimelerim listen</td><td>Senin kaydettiklerin</td><td>Listeni telefonlar arasında taşımak</td></tr>
+    <tr><td>Rastgele bir cihaz numarası</td><td>Uygulama üretir (reklam kimliği <strong>değildir</strong>)</td><td>Aynı gün iki telefonda çalıştığında ilerlemeyi karıştırmadan birleştirmek</td></tr>
+    <tr><td>IP adresi, cihaz bilgisi</td><td>Giriş sırasında Google (Firebase) ve Apple/Google giriş hizmetleri teknik olarak işler</td><td>Girişin güvenliği, kötüye kullanımı önlemek</td></tr>
   </table>
   </div>
 
-  <h2>1a. Bildirimler</h2>
-  <p>Mobil uygulama sürümünde günlük hatırlatma ve seri kurtarma bildirimi
-  gönderilebilir. Bunlar hakkında bilinmesi gerekenler:</p>
+  <h3>Bu bilgiler nerede tutulur?</h3>
   <ul>
-    <li><strong>Bildirimler cihazında üretilir.</strong> Sunucudan gönderilmez; bizim
-    tarafımızdan tetiklenmez. Uygulama, seçtiğin saati cihazın kendi zamanlayıcısına yazar.</li>
-    <li><strong>Cihaz kimliği toplanmaz.</strong> Push bildirim kullanılmadığı için
-    cihaz belirteci (push token) oluşturulmaz ve hiçbir yere iletilmez.</li>
-    <li><strong>İzinsiz bildirim gönderilmez.</strong> İzin, uygulama içinde açıkça
-    "Hatırlat" dediğin anda istenir; vermezsen bildirim kurulmaz.</li>
-    <li><strong>Her zaman kapatılabilir.</strong> Ayarlar → Bildirimler bölümünden veya
-    cihazının bildirim ayarlarından kapatabilirsin.</li>
-    <li><strong>Bildirim içeriği yalnızca kendi ilerlemenle ilgilidir</strong> (çalışma
-    hatırlatması, seri uyarısı). Reklam veya tanıtım bildirimi gönderilmez.</li>
-    <li><strong>Uygulamanın çalışması için gerekli değildir.</strong> Bildirimleri hiç
-    açmadan tüm özellikleri kullanabilirsin.</li>
+    <li><strong>Öğrenme ilerlemen ve profilin</strong> Google Firebase'in
+    <strong>Cloud Firestore</strong> hizmetinde, <strong>Frankfurt (Almanya, europe-west3)</strong>
+    bölgesindeki sunucularda tutulur.</li>
+    <li><strong>Giriş kaydın</strong> (kullanıcı kimliği, e-posta, ad, giriş yöntemi)
+    <strong>Firebase Authentication</strong> hizmetinde tutulur. Google bu kayıtları
+    <strong>ABD dahil</strong> farklı ülkelerdeki sunucularında işleyebilir
+    (<a href="#yurt-disi">§9</a>).</li>
+    <li>Uygulama üzerinden hesabındaki verilere yalnızca <strong>sen</strong> erişebilirsin: sunucu
+    kuralları, bir hesabın verisini yalnızca o hesapla giriş yapmış kişinin okuyup yazmasına izin verir.
+    Geliştirici ise sunucu tarafındaki yetkisiyle verilerine yalnızca senin talebin (ör. silme,
+    düzeltme) ya da teknik bir sorunun çözümü için gerektiğinde bakar. Tüm bağlantılar şifrelidir (HTTPS).</li>
   </ul>
 
-  <h2 id="reklamlar">1b. Reklamlar</h2>
-  <p>Uygulamanın <strong>mobil uygulama sürümü</strong> Google AdMob aracılığıyla reklam
-  gösterir. Uygulama ücretsizdir ve geliştirme masrafları bu yolla karşılanır.
-  Web/tarayıcı sürümünde reklam gösterilmez.</p>
+  <h3>Ne için kullanılmaz?</h3>
+  <ul>
+    <li>Reklam, profil çıkarma veya pazarlama için kullanılmaz; sana pazarlama e-postası göndermeyiz.</li>
+    <li>Başka kullanıcılara gösterilmez. Bu sürümde başkasının görebileceği bir profil, arkadaş
+    listesi ya da sıralama yoktur.</li>
+    <li>Satılmaz, kiralanmaz.</li>
+  </ul>
+
+  <h3>Çıkış yaparsan</h3>
+  <p>"Çıkış yap" dediğinde ilerlemen hesabında kalır; <strong>telefondaki kopyası silinir</strong>
+  (ilerleme, Kelimelerim ve Premium bu telefonda kapanır). Aynı hesapla tekrar giriş yaptığında
+  her şey geri gelir. Son ilerlemenin bir kısmı henüz buluta aktarılmadıysa (örneğin internet
+  yoksa) uygulama seni uyarır; yine de çıkarsan aktarılmamış kısım kaybolabilir.
+  Çıkış yapmak aboneliği iptal etmez.</p>
+
+  <h3>"İlerlemeyi sıfırla" dersen</h3>
+  <p>Giriş yapmışken ilerlemeyi sıfırlarsan <strong>hesabındaki ilerleme de sıfırlanır</strong>.
+  Hesabın ve Premium'un etkilenmez.</p>
+
+  <h2 id="premium">3. Premium abonelik</h2>
+  <ul>
+    <li><strong>Premium almak için hesap gerekir.</strong> Abonelik hesabına bağlanır; aynı hesapla
+    giriş yaptığın her telefonda (Android ya da iPhone) Premium açık olur.</li>
+    <li><strong>Ödemeyi Apple (App Store) ya da Google (Google Play) alır.</strong> Kart bilgilerin
+    bize veya uygulamaya hiç gelmez.</li>
+    <li><strong>Ne paylaşılıyor:</strong> aboneliğinin geçerli olup olmadığını doğrulamak için
+    uygulama, abonelik altyapısı <strong>RevenueCat</strong>'e <strong>kullanıcı kimliğini</strong>
+    (rastgele hesap numarası), mağazanın satın alma kaydını, cihaz/işletim sistemi bilgisini ve
+    IP adresini iletir. Adın ve e-postan RevenueCat'e gönderilmez.</li>
+    <li><strong>Ne için:</strong> yalnızca Premium'u açmak, yenilemeyi/iptali izlemek ve
+    "Geri yükle" özelliği için. Reklam veya profil çıkarma amacıyla kullanılmaz.</li>
+    <li>Premium aboneler reklam görmez; bu durumda <a href="#reklamlar">§4</a>'teki reklam
+    verisi paylaşımı da olmaz.</li>
+    <li>Hesabını silersen Premium erişimin sona erer; aboneliğin iptali mağazaya göre değişir
+    (ayrıntı <a href="#silme">§8</a>'de).</li>
+  </ul>
+
+  <h2 id="reklamlar">4. Reklamlar</h2>
+  <p>Uygulamanın <strong>mobil sürümü</strong> Google AdMob aracılığıyla reklam gösterir.
+  Web/tarayıcı sürümünde reklam yoktur.</p>
   <ul>
     <li><strong>Hangi reklamlar:</strong> yalnızca (a) senin bir düğmeye basarak başlattığın
-    ödüllü videolar (enerji kazanmak, seriyi dondurmak) ve
-    (b) bir dersi bitirdikten sonra çıkan, <strong>atlanabilir</strong> ödüllü geçiş reklamı.
-    Banner reklam, açılış reklamı ve atlanamayan reklam <strong>kullanılmaz</strong>.</li>
-    <li><strong>Soruların arasında reklam çıkmaz.</strong> Quiz akışı hiçbir zaman
-    reklamla bölünmez.</li>
+    ödüllü videolar (enerji kazanmak, serini korumak) ve (b) bir dersi bitirdikten sonra çıkan,
+    <strong>atlanabilir</strong> ödüllü geçiş reklamı. Banner, açılış reklamı ve atlanamayan
+    reklam <strong>kullanılmaz</strong>. Soruların arasında reklam çıkmaz.</li>
     <li><strong>Reklam izlemek zorunlu değildir.</strong> Tüm öğrenme içeriği reklam
-    izlemeden kullanılabilir; reklamlar yalnızca ek haklar sağlar.</li>
+    izlemeden kullanılabilir.</li>
     <li><strong>Ne paylaşılıyor:</strong> reklam gösterimi için Google, cihazının
-    <strong>reklam kimliğini</strong> (Android Advertising ID / iOS IDFA), IP adresini,
-    cihaz ve uygulama bilgisini işler. Bu veriler Google tarafından toplanır;
-    geliştiriciye ulaşan tek şey birleştirilmiş (anonim) gelir ve gösterim istatistikleridir.</li>
-    <li><strong>Ne paylaşılMIYOR:</strong> öğrendiğin kelimeler, quiz sonuçların, XP'in,
-    serin ve diğer ilerleme verilerin reklam sistemine <strong>hiçbir şekilde</strong>
-    aktarılmaz. Bu veriler cihazından çıkmaz.</li>
-    <li><strong>Onay (AEA/Birleşik Krallık):</strong> Avrupa Ekonomik Alanı, İsviçre ve
-    Birleşik Krallık'taki kullanıcılara, ilk açılışta Google'ın onay formu gösterilir.
-    Verdiğin cevabı daha sonra <em>Ayarlar → Reklam Gizlilik Tercihleri</em>'nden
-    değiştirebilirsin. Onay vermezsen reklamlar
-    <strong>kişiselleştirilmemiş</strong> olarak gösterilir.</li>
-    <li><strong>Diğer ülkeler:</strong> cihaz ayarlarından reklam kişiselleştirmesini
-    kapatabilir veya reklam kimliğini sıfırlayabilirsin
-    (Android: <em>Ayarlar → Google → Reklamlar</em>, iOS: <em>Ayarlar → Gizlilik ve
-    Güvenlik → İzleme</em>).</li>
-    <li><strong>Reklam içeriği:</strong> uygulama her yaşa uygun olduğu için reklam
-    içerik derecesi <strong>"Genel İzleyici"</strong> ile sınırlandırılmıştır.</li>
-    <li><strong>Google'ın veri işleme politikası:</strong>
+    <strong>reklam kimliğini</strong> (Android Advertising ID / iOS IDFA), IP adresini, cihaz ve
+    uygulama bilgisini işler. Geliştirici bu verileri görmez; AdMob'dan yalnızca toplu gelir ve
+    gösterim raporları alır.</li>
+    <li><strong>Ne paylaşılmıyor:</strong> hesabın, e-postan, adın, öğrendiğin kelimeler,
+    quiz sonuçların, XP'in ve serin reklam sistemine <strong>hiçbir şekilde</strong> aktarılmaz.</li>
+    <li><strong>Onay:</strong> Avrupa Ekonomik Alanı, İsviçre ve Birleşik Krallık'taki
+    kullanıcılara ilk açılışta Google'ın onay formu gösterilir; cevabını
+    <em>Ayarlar → Reklam Gizlilik Tercihleri</em>'nden değiştirebilirsin. iPhone'da ayrıca
+    Apple'ın "izleme" izni sorulur. Onay vermezsen reklamlar <strong>kişiselleştirilmeden</strong>
+    gösterilir.</li>
+    <li><strong>Diğer ülkeler:</strong> cihaz ayarlarından reklam kişiselleştirmesini kapatabilir
+    veya reklam kimliğini sıfırlayabilirsin (Android: <em>Ayarlar → Google → Reklamlar</em>,
+    iPhone: <em>Ayarlar → Gizlilik ve Güvenlik → İzleme</em>).</li>
+    <li><strong>Reklam içeriği:</strong> reklamların içerik derecesi ve engellenen reklam kategorileri
+    (ör. kumar, alkol, flört) Google AdMob ayarlarından yönetilir. Google'ın sınıflandırması otomatik
+    olduğu için uygunsuz bir reklamın hiç çıkmayacağı garanti edilemez; görürsen bize bildirebilirsin.</li>
+    <li>Google'ın veri işleme politikası:
     <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">policies.google.com/technologies/partner-sites</a></li>
   </ul>
 
-  <h2 id="hata-bildirimi">1c. Hata bildirimi</h2>
+  <h2 id="hata-bildirimi">5. Hata bildirimi</h2>
   <p>Bir kelimenin çevirisinde, örnek cümlesinde veya yazımında hata görürsen uygulamanın
-  içinden bize bildirebilirsin (bayrak / "Bildir" düğmesi). Bu tamamen isteğe bağlıdır:
-  sen göndermedikçe hiçbir şey iletilmez.</p>
+  içinden bize bildirebilirsin. Bu tamamen isteğe bağlıdır.</p>
   <ul>
     <li><strong>Ne gönderiliyor:</strong> bildirdiğin kelime (numarası, kendisi ve anlamı),
     seçtiğin hata türü, yazdıysan notun, bildirimi hangi ekrandan yaptığın, quiz ekranından
-    bildirdiysen soru türü ile doğru ve seçtiğin cevap, uygulama sürümü, platform
-    (Android / iOS / web) ve gönderim zamanı.</li>
-    <li><strong>Ne gönderilMİYOR:</strong> ad, e-posta, hesap, cihaz kimliği, reklam kimliği
-    ve ilerleme verin. Bildirim seninle eşleştirilemez.</li>
-    <li><strong>Nereye gidiyor:</strong> geliştiricinin Google E-Tablolar'da tuttuğu bir
-    tabloya (Google Apps Script aracılığıyla). Google, isteği karşılarken teknik olarak
-    IP adresini görür; bu bilgi tabloya yazılmaz.</li>
-    <li><strong>Ne için kullanılıyor:</strong> yalnızca kelime içeriğini düzeltmek için.
-    Başka bir amaçla işlenmez, kimseyle paylaşılmaz.</li>
-    <li><strong>Notuna kişisel bilgi yazma.</strong> Not alanı serbest metindir; ad, telefon
-    gibi bilgileri buraya yazmamanı rica ederiz.</li>
-    <li><strong>İnternet yoksa</strong> bildirim cihazında bekler, bağlantı gelince gönderilir.</li>
+    bildirdiysen soru türü ile doğru ve seçtiğin cevap, uygulama sürümü, platform ve gönderim zamanı.</li>
+    <li><strong>Ne gönderilmiyor:</strong> ad, e-posta, hesap/kullanıcı kimliği, cihaz kimliği,
+    reklam kimliği ve ilerleme verin. Google isteği karşılarken teknik olarak IP adresini görür,
+    ama bu bilgi tabloya yazılmaz; bildirimi seninle eşleştirmeyiz.</li>
+    <li><strong>Nereye gidiyor:</strong> geliştiricinin Google E-Tablolar'da tuttuğu bir tabloya
+    (Google Apps Script aracılığıyla). Google isteği karşılarken teknik olarak IP adresini görür;
+    bu bilgi tabloya yazılmaz.</li>
+    <li>Yalnızca kelime içeriğini düzeltmek için kullanılır. Not alanına kişisel bilgi yazmamanı
+    rica ederiz.</li>
   </ul>
 
-  <h2 id="premium">1d. Premium abonelik</h2>
-  <p>Premium'u satın alırsan ödeme <strong>tamamen mağaza (App Store / Google Play)
-  tarafından</strong> alınır; kart bilgilerin bize veya uygulamaya hiç gelmez.</p>
+  <h2 id="bildirimler">6. Bildirimler</h2>
   <ul>
-    <li><strong>Ne paylaşılıyor:</strong> aboneliğinin geçerli olup olmadığını doğrulamak için
-    uygulama, abonelik altyapısı <strong>RevenueCat</strong>'e rastgele üretilmiş anonim bir
-    kullanıcı kimliği, mağazanın satın alma kaydını, cihaz/işletim sistemi bilgisini ve
-    IP adresini iletir. Ad, e-posta veya telefon gönderilmez.</li>
-    <li><strong>Ne için:</strong> yalnızca Premium'u açmak, yenilemeyi/iptali izlemek ve
-    "Satın alımları geri yükle" özelliği için. Reklam veya profil çıkarma amacıyla kullanılmaz.</li>
-    <li>Premium almayan kullanıcılarda bu doğrulama yalnızca mevcut bir abonelik olup
-    olmadığını kontrol etmekle sınırlıdır.</li>
-    <li>Premium aboneler reklam görmez; bu durumda <a href="#reklamlar">§1b</a>'deki reklam
-    verisi paylaşımı da olmaz.</li>
+    <li>Günlük hatırlatma ve seri bildirimleri <strong>telefonunda üretilir</strong>; sunucudan
+    gönderilmez. Bu yüzden bildirim belirteci (push token) oluşturulmaz ve hiçbir yere iletilmez.</li>
+    <li>İzin, uygulama içinde "Hatırlat" dediğin anda istenir; vermezsen bildirim kurulmaz.
+    Ayarlardan ya da telefonunun bildirim ayarlarından her zaman kapatabilirsin.</li>
+    <li>Reklam veya tanıtım bildirimi gönderilmez.</li>
   </ul>
 
-  <h2>2. Bu sürümde <em>olmayan</em>lar</h2>
-  <p>Açık olmak adına, uygulamanın şu an yapmadığı şeyler:</p>
+  <h2 id="saklama">7. Ne kadar süre saklıyoruz?</h2>
   <ul>
-    <li><strong>Hesap ve giriş yok.</strong> Ad, e-posta, şifre veya telefon numarası istemiyoruz.</li>
-    <li><strong>Öğrenme verin sunucuya gönderilmiyor.</strong> İlerlemen, quiz sonuçların ve
-    XP'in hiçbir sunucuya iletilmez. Uygulamanın kurduğu dış bağlantılar yalnızca mobil
-    sürümdeki <a href="#reklamlar">reklam gösterimi</a>,
-    <a href="#premium">Premium abonelik doğrulaması</a> ve senin gönderdiğin
-    <a href="#hata-bildirimi">hata bildirimleri</a> içindir.</li>
-    <li><strong>Analitik ve takip yok.</strong> Google Analytics benzeri bir ölçüm aracı
-    kullanılmıyor; hangi ekranı açtığın, ne kadar kaldığın ölçülmüyor.</li>
-    <li><strong>Kişiselleştirilmiş içerik profili çıkarılmıyor.</strong> Reklamlar dışında
-    senin hakkında hiçbir profil oluşturulmuyor.</li>
-    <li><strong>Takip çerezi yok.</strong> Uygulama çerez kullanmaz; yukarıdaki veriler tarayıcı deposunda tutulur.</li>
-    <li><strong>Konum, kamera, mikrofon, rehber erişimi yok.</strong></li>
-    <li><strong>Push bildirim yok.</strong> Bildirimler cihazda üretilir; sunucudan
-    gönderilen bildirim ve buna bağlı cihaz belirteci bulunmaz.</li>
+    <li><strong>Hesap verilerin</strong> (giriş kaydı, profil, öğrenme ilerlemesi) hesabın açık
+    olduğu sürece saklanır. Hesabını sildiğinde silinir (<a href="#silme">§8</a>); sağlayıcının
+    teknik yedeklerindeki kopyalar onun silme süreleri içinde kalkar.</li>
+    <li><strong>Abonelik kayıtların</strong> RevenueCat'te, abonelik durumunu doğrulamak için
+    gerektiği sürece tutulur; abonelik durdurulduktan sonra silinir (mevzuat gereği saklanması
+    zorunlu kayıtlar hariç).</li>
+    <li><strong>Hesap açmadan kullanıyorsan</strong> bizde saklanan bir verin yoktur.</li>
+    <li><strong>Hata bildirimleri</strong> kimseyle eşleşmez; kelime düzeltildikten sonra
+    tablodan temizlenebilir.</li>
   </ul>
 
-  <h2>3. Verilerini nasıl silersin?</h2>
-  <p>Tüm veriler cihazında olduğu için silme işlemi tamamen senin kontrolünde:</p>
+  <h2 id="silme">8. Hesabını nasıl silersin?</h2>
+  <p><strong>Uygulamanın içinden:</strong> <strong>Profil → Hesap → Hesabı sil</strong>.
+  İki adımda onay istenir, ardından Apple ya da Google ile kimliğini bir kez daha doğrularsın.
+  Silme için internet gerekir.</p>
+  <p><strong>Uygulama elinde değilse:</strong> <a href="hesap-sil.html">Hesap silme sayfası</a>'ndaki
+  adımları izleyebilir ya da <a href="mailto:mehmetmutlu0011@gmail.com">mehmetmutlu0011@gmail.com</a>
+  adresine, hesabında kullandığın e-postadan yazabilirsin. E-postayla gelen talepler
+  <strong>30 gün içinde</strong> sonuçlandırılır.</p>
+
+  <h3>Hesabın silindiğinde</h3>
   <ul>
-    <li><strong>Tarayıcıda:</strong> Tarayıcı ayarlarından bu sitenin site verilerini temizle.</li>
-    <li><strong>Mobil uygulamada:</strong> Uygulamayı kaldırmak tüm verileri siler.</li>
+    <li>Hesabındaki her şey silinir: ilerlemen, serin, XP'in, Kelimelerim listen, adın ve giriş kaydın.</li>
+    <li><strong>Telefonundaki ilerleme de silinir</strong> ve uygulama ilk açılış ekranına döner.
+    İstersen sıfırdan, hesapsız devam edebilirsin.</li>
+    <li>Apple ile giriş yaptıysan Apple'daki giriş yetkisi de iptal edilir.</li>
+    <li>Silinen veriler geri getirilemez. Sunucu sağlayıcımızın teknik yedeklerinde kalan
+    kopyalar, sağlayıcının kendi silme süreleri içinde kalıcı olarak silinir. Mevzuat gereği
+    saklanması zorunlu bir kayıt varsa yalnızca o, gereken süre boyunca saklanır.</li>
   </ul>
-  <p>Silme işleminden sonra ilerlemen geri getirilemez — yedek bir kopyası bizde bulunmaz.</p>
 
-  <h2>4. Verilerin başka bir cihaza taşınmaz</h2>
-  <p>Hesap sistemi olmadığı için ilerlemen cihaza bağlıdır. Telefonunu değiştirirsen
-  ilerlemen yeni cihaza taşınmaz. Bu, gizliliğin lehine olan bilinçli bir tercihtir;
-  ileride isteğe bağlı bir hesap özelliği eklenirse bu metin güncellenecektir.</p>
+  <h3>Aboneliğin ne olur?</h3>
+  <ul>
+    <li><strong>Android (Google Play):</strong> hesabını sildiğinde aboneliğin
+    <strong>iptal edilir ve kullanmadığın günlerin parası iade edilir.</strong> Senin ayrıca bir
+    şey yapman gerekmez.</li>
+    <li><strong>iPhone (App Store):</strong> Apple, otomatik yenilemeyi senin adına kapatmamıza
+    izin vermez. Silme ekranında <strong>"Aboneliği kapat"</strong> düğmesiyle Apple'ın
+    abonelik sayfasını açarız. Premium erişimin hesabın silindiği anda sona erer, ancak
+    <strong>aboneliği Apple üzerinden iptal etmezsen ödemelerin Apple üzerinden devam eder.</strong>
+    Kullanmadığın süre için iade talebini Apple'a iletebilirsin
+    (<a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>).</li>
+    <li><strong>Ödeme kayıtları:</strong> ödemeyi Apple ya da Google aldığı için fatura ve ödeme
+    kayıtları onlarda, kendi yasal yükümlülükleri gereği saklanır. RevenueCat'teki abonelik
+    kaydın abonelik durdurulduktan sonra silinir; mevzuat gereği saklanması zorunlu bir işlem
+    kaydı varsa yalnızca o, gereken süre boyunca saklanır.</li>
+  </ul>
 
-  <h2>5. Üçüncü taraf hizmetler</h2>
-  <p><strong>Google AdMob</strong> (Google Ireland Limited / Google LLC) — yalnızca mobil
-  uygulama sürümünde, reklam gösterimi için. İşlediği veriler ve onay mekanizması
-  <a href="#reklamlar">§1b</a>'de açıklanmıştır.</p>
-  <p><strong>Google E-Tablolar / Apps Script</strong> (Google) — yalnızca bir hata
-  bildirdiğinde. Gönderilen bilgiler <a href="#hata-bildirimi">§1c</a>'de açıklanmıştır.</p>
-  <p><strong>RevenueCat</strong> (RevenueCat, Inc.) ve <strong>Apple App Store / Google Play</strong>
-  — yalnızca mobil uygulamada, Premium abonelik satın alma ve doğrulaması için.
-  Ayrıntı <a href="#premium">§1d</a>'de.</p>
-  <p>Bunlar dışında uygulama üçüncü taraf hizmete istek atmaz. Kullandığımız yazı tipi (Nunito)
-  ve simge seti (Remix Icon) uygulamanın içine gömülüdür; bir içerik ağından (CDN)
-  indirilmez. Bu, hem çevrimdışı çalışmayı sağlar hem de üçüncü tarafların
-  IP adresini görmesini engeller.</p>
-  <p>Uygulamayı barındıran altyapı sağlayıcısı (Cloudflare Pages), tüm web sunucuları
-  gibi teknik erişim kayıtları tutabilir. Bu kayıtlar bizim tarafımızdan
-  görüntülenmez ve bir kullanıcıyla eşleştirilmez.</p>
+  <h2 id="hizmetler">9. Verini işleyen hizmetler ve yurt dışı aktarım</h2>
+  <p id="yurt-disi">Uygulama aşağıdaki hizmet sağlayıcılarla çalışır. Bu sağlayıcıların bir kısmı
+  verini Türkiye dışındaki sunucularda işler. Yurt dışı aktarıma ilişkin ayrıntılar
+  <a href="kvkk.html">KVKK Aydınlatma Metni</a>'ndedir.</p>
+  <div class="yasal-kaydir">
+  <table>
+    <tr><th>Hizmet</th><th>Ne için</th><th>Nerede</th></tr>
+    <tr><td><strong>Google Firebase</strong> (Authentication + Cloud Firestore) — Google LLC / Google Ireland Ltd.</td><td>Giriş ve hesabındaki verilerin yedeği</td><td>Firestore: Frankfurt (Almanya). Giriş kayıtları: ABD dahil Google sunucuları</td></tr>
+    <tr><td><strong>Apple ile giriş</strong> — Apple Inc.</td><td>Apple hesabınla giriş</td><td>Apple sunucuları</td></tr>
+    <tr><td><strong>Google ile giriş</strong> — Google LLC</td><td>Google hesabınla giriş</td><td>Google sunucuları</td></tr>
+    <tr><td><strong>RevenueCat</strong> — RevenueCat, Inc.</td><td>Premium aboneliğin doğrulanması</td><td>ABD</td></tr>
+    <tr><td><strong>App Store / Google Play</strong> — Apple Inc. / Google LLC</td><td>Premium ödemesi</td><td>Apple / Google sunucuları</td></tr>
+    <tr><td><strong>Google AdMob</strong> — Google LLC / Google Ireland Ltd.</td><td>Reklam gösterimi (yalnız ücretsiz kullanıcılarda)</td><td>Google sunucuları</td></tr>
+    <tr><td><strong>Google E-Tablolar / Apps Script</strong> — Google LLC</td><td>Gönderdiğin hata bildirimleri</td><td>Google sunucuları</td></tr>
+    <tr><td><strong>Cloudflare</strong> — Cloudflare, Inc.</td><td>Web sayfalarının barındırılması; hesap silmede Android aboneliğinin iptal edilmesi</td><td>Cloudflare sunucuları</td></tr>
+  </table>
+  </div>
+  <p>Kullandığımız yazı tipi (Nunito) ve simge seti (Remix Icon) uygulamanın içine gömülüdür;
+  bir içerik ağından indirilmez.</p>
 
-  <h2>6. Çocukların gizliliği</h2>
-  <p>Uygulama eğitim amaçlıdır ve her yaştan kullanıcıya uygundur; ancak
-  <strong>özellikle 13 yaş altına yönelik değildir</strong>. Geliştirici olarak hiç kimseden
-  — çocuklar dahil — kişisel veri toplamıyoruz.</p>
-  <p>Reklam tarafında, gösterilecek reklamların içerik derecesi "Genel İzleyici" ile
-  sınırlandırılmıştır. Çocuğunun reklam görmesini istemiyorsan cihazın aile denetimi
-  ayarlarını kullanabilirsin.</p>
+  <h2 id="olmayanlar">10. Yapmadıklarımız</h2>
+  <ul>
+    <li><strong>Analitik ve takip yok.</strong> Hangi ekranı açtığın, ne kadar kaldığın ölçülmez.</li>
+    <li><strong>Takip çerezi yok.</strong></li>
+    <li><strong>Konum, kamera, mikrofon, rehber ve fotoğraf erişimi yok.</strong></li>
+    <li><strong>Sunucudan gönderilen (push) bildirim yok.</strong></li>
+    <li><strong>Verini satmıyoruz</strong> ve reklam için kullanmıyoruz.</li>
+    <li><strong>Başkasına görünen profil yok.</strong> Adın ve ilerlemen yalnızca sana görünür.</li>
+  </ul>
 
-  <h2>7. Bu politika değişirse</h2>
-  <p>İleride hesap, bulut senkronizasyonu, abonelik veya reklam gibi özellikler
-  eklenirse bu metin <strong>özellik yayına alınmadan önce</strong> güncellenir ve
-  yukarıdaki tarih değiştirilir. Değişiklik geçmişi uygulamanın kaynak kod deposunda tutulur.</p>
+  <h2 id="cocuklar">11. Çocukların gizliliği</h2>
+  <p>Uygulama eğitim amaçlıdır, ancak <strong>13 yaşından küçük çocuklara yönelik
+  değildir</strong>. 13 yaşından küçüksen hesap açmamalısın.
+  13 yaşından küçük bir çocuğun hesap açtığını fark edersen
+  <a href="mailto:mehmetmutlu0011@gmail.com">mehmetmutlu0011@gmail.com</a> adresine yaz; hesabı ve verilerini sileriz.</p>
+  <p>Reklamların içerik derecesi ve engellenen kategoriler AdMob ayarlarından yönetilir; bu
+  ayarlar her reklamın her yaşa uygun olduğunu garanti etmez. Çocuğunun reklam görmesini
+  istemiyorsan cihazın aile denetimi ayarlarını kullanabilirsin.</p>
 
-  <h2>8. İletişim</h2>
-  <p>Gizlilikle ilgili soruların için: <a href="mailto:mehmetmutlu0011@gmail.com">mehmetmutlu0011@gmail.com</a></p>
+  <h2>12. Bu politika değişirse</h2>
+  <p>Yeni bir özellik daha fazla veri gerektirirse bu metin <strong>özellik yayına alınmadan önce</strong>
+  güncellenir ve yukarıdaki tarih değiştirilir.</p>
+
+  <h2>13. İletişim</h2>
+  <p>Gizlilikle ilgili soruların ve taleplerin için:
+  <a href="mailto:mehmetmutlu0011@gmail.com">mehmetmutlu0011@gmail.com</a></p>
 
   <div class="yasal-alt">
     <p>Kelime Ezberle · Geliştirici: Mehmet Mutlu ·
     <a href="kvkk.html">KVKK Aydınlatma Metni</a> ·
-    <a href="kullanim-sartlari.html">Kullanım Şartları</a></p>
+    <a href="kullanim-sartlari.html">Kullanım Şartları</a> ·
+    <a href="hesap-sil.html">Hesap silme</a></p>
   </div>
 </div>
 </body>

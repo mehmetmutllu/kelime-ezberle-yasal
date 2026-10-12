@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0F172A">
+<meta name="description" content="Kelime Ezberle hesabını ve verilerini nasıl silersin — uygulama içinden ya da e-postayla.">
+<title>Hesabını Sil – Kelime Ezberle</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="stylesheet" href="../css/vendor/nunito.css">
+<link rel="stylesheet" href="yasal.css">
+<script>
+  /* Uygulamadaki tema secimini yansit (localStorage: wm_theme).
+     Secim YOKSA cihazin temasina uyulur. Okunamazsa koyu tema varsayilan kalir.
+     Bu sayfa Google Play'in "uygulamayi kurmadan hesap silme" sartini karsilar
+     (plan-1.4 §6). Uygulama kurulu olmadan acilabilmeli: dis baglanti yok. */
+  try {
+    var tema = localStorage.getItem('wm_theme');
+    if (tema !== 'light' && tema !== 'dark') {
+      tema = (window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark';
+    }
+    document.documentElement.dataset.theme = tema;
+    var m = document.querySelector('meta[name="theme-color"]');
+    if (m) m.setAttribute('content', tema === 'light' ? '#F0F2F5' : '#0F172A');
+  } catch (e) { document.documentElement.dataset.theme = 'dark'; }
+</script>
+</head>
+<body>
+<div class="yasal-sarmal">
+  <div class="yasal-ust">
+    <a class="yasal-geri" href="../index.html">&larr; Uygulamaya dön</a>
+  </div>
+
+  <h1>Kelime Ezberle hesabını sil</h1>
+  <p class="yasal-tarih">Kelime Ezberle (Mehmet Mutlu) · Son güncelleme: 12 Ekim 2026</p>
+
+  <div class="yasal-kutu">
+    <p>Bu sayfa, Kelime Ezberle'de <strong>Apple ya da Google hesabıyla giriş yaptıysan</strong>
+    hesabını ve verilerini nasıl sileceğini anlatır. Hesap açmadan kullandıysan bizde saklanan
+    bir verin yoktur; uygulamayı kaldırman yeterli.</p>
+  </div>
+
+  <h2>1. Uygulamanın içinden (en hızlı yol)</h2>
+  <ol>
+    <li>Kelime Ezberle'yi aç.</li>
+    <li>Alttaki menüden <strong>Profil</strong>'e dokun.</li>
+    <li><strong>Hesap</strong>'a dokun.</li>
+    <li>En alttaki kırmızı <strong>Hesabı sil</strong>'e dokun.</li>
+    <li>Silinecekleri oku ve <strong>Hesabımı sil</strong> ile onayla.</li>
+    <li>Apple ya da Google ile kimliğini bir kez daha doğrula.</li>
+  </ol>
+  <p>Hesabın <strong>hemen</strong> silinir. Silme için internet bağlantısı gerekir.</p>
+
+  <h2>2. Uygulama elinde değilse: e-postayla</h2>
+  <p><a href="mailto:mehmetmutlu0011@gmail.com?subject=Hesap%20silme%20talebi">mehmetmutlu0011@gmail.com</a>
+  adresine <strong>"Hesap silme talebi"</strong> konulu bir e-posta gönder.</p>
+  <ul>
+    <li>E-postayı, Kelime Ezberle'ye giriş yaparken kullandığın Apple ya da Google hesabının
+    e-posta adresinden göndermen, hesabını bulmamızı ve senin olduğunu doğrulamamızı kolaylaştırır.</li>
+    <li>Apple ile girerken e-postanı gizlediysen, Apple'ın verdiği adresi bilmeyebilirsin.
+    Bu durumda hangi yöntemle giriş yaptığını (Apple / Google) ve hesabı açtığın yaklaşık
+    tarihi yaz; gerekirse seninle bu adres üzerinden doğrulama yaparız.</li>
+    <li>Talebin <strong>en geç 30 gün içinde</strong> sonuçlandırılır ve sana e-postayla bilgi verilir.</li>
+  </ul>
+
+  <h2>3. Ne silinir?</h2>
+  <ul>
+    <li>Öğrenme ilerlemen: dersler, bölüm sonuçları, tekrar takvimi, cevap geçmişi</li>
+    <li>Serin ve XP'in</li>
+    <li>Kelimelerim listen</li>
+    <li>Adın, e-posta adresin ve giriş kaydın</li>
+    <li>Uygulama içinden silersen <strong>telefonundaki ilerleme de</strong> silinir ve uygulama
+    ilk açılış ekranına döner.</li>
+  </ul>
+  <p>Silinen veriler geri getirilemez. Sunucu sağlayıcımızın teknik yedeklerinde kalan kopyalar,
+  sağlayıcının kendi silme süreleri içinde kalıcı olarak silinir.</p>
+
+  <h2>4. Ne saklanır?</h2>
+  <ul>
+    <li><strong>Ödeme kayıtları:</strong> Premium ödemesini Apple ya da Google aldığı için fatura
+    ve ödeme kayıtları onlarda, kendi yasal yükümlülükleri gereği saklanır. Bizim tarafımızda,
+    mevzuat gereği saklanması zorunlu bir işlem kaydı varsa yalnızca o, gereken süre boyunca
+    saklanır.</li>
+    <li><strong>Hata bildirimleri:</strong> kelime hatası bildirdiysen bu bildirimler zaten
+    adın ya da hesabınla eşleşmez; silme sonrasında da seninle ilişkilendirilemez.</li>
+  </ul>
+
+  <h2>5. Premium aboneliğin ne olur?</h2>
+  <p>Premium hesabına bağlıdır; hesabın silindiğinde Premium erişimin hemen sona erer.</p>
+  <ul>
+    <li><strong>Android (Google Play):</strong> aboneliğin <strong>iptal edilir ve kullanmadığın
+    günlerin parası iade edilir.</strong> Senin ayrıca bir şey yapman gerekmez.</li>
+    <li><strong>iPhone (App Store):</strong> Apple, aboneliği uygulamanın ya da bizim iptal
+    etmemize izin vermez. <strong>Aboneliği Apple üzerinden iptal etmezsen ödemelerin Apple
+    üzerinden devam eder.</strong> İptal için: iPhone'da <em>Ayarlar → adın → Abonelikler →
+    Kelime Ezberle → Aboneliği İptal Et</em> ya da
+    <a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener">apps.apple.com/account/subscriptions</a>.
+    Uygulama içinden silerken bu sayfa "Aboneliği kapat" düğmesiyle zaten açılır. Kullanmadığın
+    süre için iade talebini Apple'a iletebilirsin:
+    <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>.</li>
+  </ul>
+  <p>E-postayla silme talep ettiysen ve iPhone'da aboneliğin varsa, talebinle birlikte
+  aboneliğini Apple'dan iptal etmeyi unutma.</p>
+
+  <h2>6. Hesabı silmeden yalnızca bazı verileri silmek</h2>
+  <ul>
+    <li><strong>İlerlemeyi sıfırla</strong> (Profil → Ayarlar): ilerlemen hem telefonda hem
+    hesabında sıfırlanır; hesabın ve Premium'un kalır.</li>
+    <li><strong>Adını değiştir</strong> (Profil → Hesap).</li>
+    <li>Başka bir veri için <a href="mailto:mehmetmutlu0011@gmail.com">mehmetmutlu0011@gmail.com</a>
+    adresine yazabilirsin.</li>
+  </ul>
+
+  <div class="yasal-alt">
+    <p>Kelime Ezberle · Geliştirici: Mehmet Mutlu ·
+    <a href="gizlilik.html">Gizlilik Politikası</a> ·
+    <a href="kvkk.html">KVKK Aydınlatma Metni</a> ·
+    <a href="kullanim-sartlari.html">Kullanım Şartları</a></p>
+  </div>
+</div>
+</body>
+</html>
