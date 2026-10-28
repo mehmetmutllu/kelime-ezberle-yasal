@@ -33,7 +33,7 @@
 
 
   <h1>Gizlilik Politikası</h1>
-  <p class="yasal-tarih">Son güncelleme: 17 Ekim 2026</p>
+  <p class="yasal-tarih">Son güncelleme: 28 Ekim 2026</p>
 
   <div class="yasal-kutu">
     <p><strong>Kısaca:</strong> Kaktus'u <strong>hesap açmadan</strong> kullanabilirsin.
@@ -181,11 +181,10 @@
     seçtiğin hata türü, yazdıysan notun, bildirimi hangi ekrandan yaptığın, quiz ekranından
     bildirdiysen soru türü ile doğru ve seçtiğin cevap, uygulama sürümü, platform ve gönderim zamanı.</li>
     <li><strong>Ne gönderilmiyor:</strong> ad, e-posta, hesap/kullanıcı kimliği, cihaz kimliği,
-    reklam kimliği ve ilerleme verin. Google isteği karşılarken teknik olarak IP adresini görür,
-    ama bu bilgi tabloya yazılmaz; bildirimi seninle eşleştirmeyiz.</li>
-    <li><strong>Nereye gidiyor:</strong> geliştiricinin Google E-Tablolar'da tuttuğu bir tabloya
-    (Google Apps Script aracılığıyla). Google isteği karşılarken teknik olarak IP adresini görür;
-    bu bilgi tabloya yazılmaz.</li>
+    reklam kimliği ve ilerleme verin. Bildirimi seninle eşleştirmeyiz.</li>
+    <li><strong>Nereye gidiyor:</strong> Google Firebase'de (Cloud Firestore, Frankfurt) ayrı bir
+    bölüme; yalnızca geliştirici okuyabilir. Google isteği karşılarken teknik olarak IP adresini
+    görür; bu bilgi bildirime yazılmaz.</li>
     <li>Yalnızca kelime içeriğini düzeltmek için kullanılır. Not alanına kişisel bilgi yazmamanı
     rica ederiz.</li>
   </ul>
@@ -209,7 +208,7 @@
     zorunlu kayıtlar hariç).</li>
     <li><strong>Hesap açmadan kullanıyorsan</strong> bizde saklanan bir verin yoktur.</li>
     <li><strong>Hata bildirimleri</strong> kimseyle eşleşmez; kelime düzeltildikten sonra
-    tablodan temizlenebilir.</li>
+    silinebilir.</li>
   </ul>
 
   <h2 id="silme">8. Hesabını nasıl silersin?</h2>
@@ -256,13 +255,12 @@
   <div class="yasal-kaydir">
   <table>
     <tr><th>Hizmet</th><th>Ne için</th><th>Nerede</th></tr>
-    <tr><td><strong>Google Firebase</strong> (Authentication + Cloud Firestore) — Google LLC / Google Ireland Ltd.</td><td>Giriş ve hesabındaki verilerin yedeği</td><td>Firestore: Frankfurt (Almanya). Giriş kayıtları: ABD dahil Google sunucuları</td></tr>
+    <tr><td><strong>Google Firebase</strong> (Authentication + Cloud Firestore) — Google LLC / Google Ireland Ltd.</td><td>Giriş, hesabındaki verilerin yedeği ve gönderdiğin hata bildirimleri</td><td>Firestore: Frankfurt (Almanya). Giriş kayıtları: ABD dahil Google sunucuları</td></tr>
     <tr><td><strong>Apple ile giriş</strong> — Apple Inc.</td><td>Apple hesabınla giriş</td><td>Apple sunucuları</td></tr>
     <tr><td><strong>Google ile giriş</strong> — Google LLC</td><td>Google hesabınla giriş</td><td>Google sunucuları</td></tr>
     <tr><td><strong>RevenueCat</strong> — RevenueCat, Inc.</td><td>Premium aboneliğin doğrulanması</td><td>ABD</td></tr>
     <tr><td><strong>App Store / Google Play</strong> — Apple Inc. / Google LLC</td><td>Premium ödemesi</td><td>Apple / Google sunucuları</td></tr>
     <tr><td><strong>Google AdMob</strong> — Google LLC / Google Ireland Ltd.</td><td>Reklam gösterimi (yalnız ücretsiz kullanıcılarda)</td><td>Google sunucuları</td></tr>
-    <tr><td><strong>Google E-Tablolar / Apps Script</strong> — Google LLC</td><td>Gönderdiğin hata bildirimleri</td><td>Google sunucuları</td></tr>
     <tr><td><strong>Cloudflare</strong> — Cloudflare, Inc.</td><td>Web sayfalarının barındırılması; hesap silmede Android aboneliğinin iptal edilmesi</td><td>Cloudflare sunucuları</td></tr>
   </table>
   </div>
