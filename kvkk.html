@@ -36,8 +36,8 @@
   <p class="yasal-tarih">6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında · Son güncelleme: 4 Kasım 2026</p>
 
   <div class="yasal-kutu">
-    <p><strong>Özet:</strong> Kaktus'u hesap açmadan kullanırsan öğrenme verin yalnızca
-    cihazında kalır; bu veriler üzerinde veri sorumlusunun erişimi yoktur.</p>
+    <p><strong>Özet:</strong> Kaktus'u hesap açmadan kullanırsan öğrenme verin bize gönderilmez;
+    bu veriler üzerinde veri sorumlusunun erişimi yoktur.</p>
     <p>İsteğe bağlı olarak <strong>Apple ya da Google hesabınla giriş yaparsan</strong> kimlik,
     iletişim ve öğrenme verilerin hesabına kaydedilir ve aşağıda açıklanan şekilde işlenir.
     Premium abonelik yalnızca hesapla alınabilir. Mobil sürümde reklam gösterimi için cihazının
@@ -78,9 +78,9 @@
     </tr>
     <tr>
       <td>Müşteri işlem (abonelik)</td>
-      <td>Kullanıcı kimliği ile ilişkili abonelik durumu ve mağaza satın alma kaydı (kart bilgisi değil)</td>
-      <td>Premium'un açılması, yenileme/iptalin izlenmesi, geri yükleme, hesap silmede aboneliğin durdurulması</td>
-      <td>Sözleşmenin ifası (c) · Hukuki yükümlülük (ç)</td>
+      <td>Kullanıcı kimliği ile ilişkili abonelik durumu ve mağaza satın alma kaydı (kart bilgisi değil); hesap açmayan kullanıcıda anonim kimlik, cihaz bilgisi ve IP adresi</td>
+      <td>Premium'un açılması, yenileme/iptalin izlenmesi, geri yükleme, hesap silmede aboneliğin durdurulması; fiyat ve tekliflerin gösterilmesi</td>
+      <td>Sözleşmenin ifası (c) · Hukuki yükümlülük (ç) · Fiyat ve teklif sorgusu için meşru menfaat (f)</td>
     </tr>
     <tr>
       <td>İşlem güvenliği</td>
@@ -103,9 +103,10 @@
   </table>
   </div>
 
-  <p><strong>Hesap açmadan kullanım:</strong> giriş yapmazsan yukarıdaki kimlik, iletişim,
-  müşteri işlem ve işlem güvenliği verileri işlenmez; öğrenme ilerlemen yalnızca cihazının
-  yerel deposunda kalır. Ayrıntı için <a href="gizlilik.html">Gizlilik Politikası</a>.</p>
+  <p><strong>Hesap açmadan kullanım:</strong> giriş yapmazsan yukarıdaki kimlik, iletişim ve
+  öğrenme verileri işlenmez; öğrenme ilerlemen bize gönderilmez, cihazının yerel deposunda kalır.
+  Reklam verileri, RevenueCat'e giden anonim kimlik ve gönderirsen hata bildirimi yine işlenir.
+  Ayrıntı için <a href="gizlilik.html">Gizlilik Politikası</a>.</p>
   <p><strong>Bildirimler</strong> cihazında üretilir; bildirim belirteci (push token)
   oluşturulmaz ve aktarılmaz.</p>
 
@@ -127,7 +128,7 @@
     <tr><td>Google LLC / Google Ireland Ltd. — Firebase Authentication</td><td>Kullanıcı kimliği, e-posta, ad, giriş yöntemi, IP adresi</td><td>Giriş ve hesap yönetimi</td><td>ABD dahil Google sunucuları</td></tr>
     <tr><td>Google LLC / Google Ireland Ltd. — Cloud Firestore</td><td>Öğrenme ilerlemesi, Kelimelerim, profil adı, cihaz numarası; kimlik içermeyen hata bildirimleri</td><td>İlerlemenin yedeklenmesi ve taşınması; içerik düzeltme</td><td>Frankfurt, Almanya (europe-west3)</td></tr>
     <tr><td>Apple Inc. — Apple ile giriş</td><td>Giriş sırasında Apple'ın doğruladığı kimlik ve e-posta</td><td>Giriş, hesap silmede Apple bağlantısının kaldırılması</td><td>Apple sunucuları</td></tr>
-    <tr><td>RevenueCat, Inc.</td><td>Kullanıcı kimliği, satın alma kaydı, cihaz/işletim sistemi bilgisi, IP adresi</td><td>Premium aboneliğin doğrulanması</td><td>ABD</td></tr>
+    <tr><td>RevenueCat, Inc.</td><td>Kullanıcı kimliği (hesap yoksa anonim kimlik), satın alma kaydı, cihaz/işletim sistemi bilgisi, IP adresi</td><td>Premium aboneliğin doğrulanması; fiyat ve tekliflerin gösterilmesi</td><td>ABD</td></tr>
     <tr><td>Apple Inc. / Google LLC — App Store, Google Play</td><td>Satın alma işlemi (ödemeyi mağaza alır)</td><td>Ödeme, iptal ve iade</td><td>Apple / Google sunucuları</td></tr>
     <tr><td>Google LLC / Google Ireland Ltd. — AdMob</td><td>Reklam kimliği, IP adresi, cihaz ve uygulama bilgisi</td><td>Reklam gösterimi</td><td>Google sunucuları</td></tr>
     <tr><td>Liftoff Mobile, Inc. (Vungle) — Liftoff Monetize</td><td>Reklam kimliği, IP adresi, cihaz ve uygulama bilgisi</td><td>AdMob üzerinden reklam gösterimi</td><td>ABD dahil Liftoff sunucuları</td></tr>

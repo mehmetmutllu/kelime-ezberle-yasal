@@ -45,20 +45,21 @@
     <p>Mobil uygulama <strong>reklam gösterir</strong> (Google AdMob; reklamı Google ya da iş ortağı
     reklam ağları Liftoff ve Unity sunar). Reklam gösterilirken bu şirketler
     cihazının reklam kimliğini, IP adresini, cihaz ve uygulama bilgisini işler. Öğrenme verin,
-    e-postan ve hesap bilgilerin reklam amacıyla <strong>paylaşılmaz</strong>. Analitik ve takip aracı kullanmıyoruz, verini satmıyoruz.</p>
+    e-postan ve hesap bilgilerin reklam amacıyla <strong>paylaşılmaz</strong>. Kullanımı ölçen kendi analitik aracımız yok, verini satmıyoruz.</p>
     <p>Hesabını istediğin an uygulamanın içinden silebilirsin: <strong>Profil → Hesap → Hesabı sil</strong>.</p>
   </div>
 
   <h2 id="hesapsiz">1. Hesap açmadan kullanım</h2>
   <p>Giriş yapmadan kullanırken uygulama aşağıdaki bilgileri <strong>yalnızca telefonunun
-  (ya da tarayıcının) deposunda</strong> tutar. Bu veriler cihazından çıkmaz; bizim erişimimiz yoktur.</p>
+  (ya da tarayıcının) deposunda</strong> tutar. Bu veriler bize gönderilmez ve bizim erişimimiz yoktur.
+  Telefonunun sistem yedeği açıksa yedekleme Google'ın ya da Apple'ın kurallarına göre yapılır.</p>
 
   <div class="yasal-kaydir">
   <table>
     <tr><th>Ne saklanıyor</th><th>Ne işe yarıyor</th></tr>
     <tr><td>Öğrendiğin kelimeler, doğru/yanlış geçmişi, tekrar takvimi</td><td>Hangi kelimeyi ne zaman tekrar etmen gerektiğini hesaplamak</td></tr>
     <tr><td>Ders ilerlemen, günlük XP'in ve serin (streak)</td><td>İlerleme göstergeleri</td></tr>
-    <tr><td>Kelimelerim listen</td><td>Kaydettiğin kelimeleri sana göstermek</td></tr>
+    <tr><td>Kelimelerim listen</td><td>Çalıştığın kelimeleri sana göstermek</td></tr>
     <tr><td>Seviyen, tema, titreşim ve bildirim tercihlerin</td><td>Uygulamayı seçtiğin gibi açmak, hatırlatmayı seçtiğin saatte kurmak</td></tr>
     <tr><td>Enerji durumun ve son dolum zamanı</td><td>Enerjinin ne zaman dolacağını hesaplamak</td></tr>
     <tr><td>Bu ay kullandığın seri koruması ve günlük tekrar sayın</td><td>Ücretsiz sürümün sınırlarını uygulamak</td></tr>
@@ -67,9 +68,13 @@
     <tr><td>Kelime listesi</td><td>İnternet olmadan da çalışabilmek</td></tr>
   </table>
   </div>
-  <p>Bu verileri silmek için uygulamayı kaldırman (tarayıcıda site verilerini temizlemen) ya da
-  uygulamadaki <strong>"İlerlemeyi sıfırla"</strong> seçeneğini kullanman yeterli. Hesap
-  açmadıysan bizde bir yedeği yoktur; silinen ilerleme geri getirilemez.</p>
+  <p>Bu verilerin tamamını silmek için uygulamayı kaldırman (tarayıcıda site verilerini temizlemen)
+  yeterli. <strong>"İlerlemeyi sıfırla"</strong> seçeneği dersleri, XP'yi, seviyeni ve Kelimelerim
+  listeni siler; serin yalnızca sen seçersen sıfırlanır. Hesap açmadıysan bizde bir yedeği yoktur;
+  silinen ilerleme geri getirilemez.</p>
+  <p>Hesap açmasan da bazı teknik veriler cihazından çıkar: reklam verileri (<a href="#reklamlar">§4</a>)
+  ve fiyat ile teklif sorgusu için RevenueCat'e giden bilgiler (<a href="#premium">§3</a>). Hata
+  bildirimi yalnızca sen gönderirsen iletilir (<a href="#hata-bildirimi">§5</a>).</p>
 
   <h2 id="hesap">2. Hesap açarsan (isteğe bağlı)</h2>
   <p>Hesap yalnızca mobil uygulamada (Android ve iPhone) açılabilir ve
@@ -85,7 +90,7 @@
     <tr><td>Ad</td><td>Apple ya da Google (Apple yalnızca ilk girişte verir; gelmezse "Öğrenci" yazar). Profilden değiştirebilirsin</td><td>Profilinde sana göstermek. Adın <strong>yalnızca sana</strong> görünür</td></tr>
     <tr><td>Giriş yöntemi, hesabın açıldığı ve son giriş yaptığın zaman, platform (Android / iOS)</td><td>Uygulama</td><td>Hesabın düzgün çalışması ve sorun çözmek</td></tr>
     <tr><td>Öğrenme ilerlemen: ders ve bölüm sonuçları, günlük XP, seri ve seri koruması kayıtları, seviyen, tekrar takvimi, bitirdiğin diyaloglar, cevap geçmişi (hangi kelime, hangi soru türü, doğru mu, ne zaman)</td><td>Uygulamayı kullanırken</td><td>İlerlemeni yedeklemek ve başka telefonda kaldığın yerden devam etmeni sağlamak</td></tr>
-    <tr><td>Kelimelerim listen</td><td>Senin kaydettiklerin</td><td>Listeni telefonlar arasında taşımak</td></tr>
+    <tr><td>Kelimelerim listen</td><td>Uygulamayı kullanırken</td><td>Listeni telefonlar arasında taşımak</td></tr>
     <tr><td>Rastgele bir cihaz numarası</td><td>Uygulama üretir (reklam kimliği <strong>değildir</strong>)</td><td>Aynı gün iki telefonda çalıştığında ilerlemeyi karıştırmadan birleştirmek</td></tr>
     <tr><td>IP adresi, cihaz bilgisi</td><td>Giriş sırasında Google (Firebase) ve Apple/Google giriş hizmetleri teknik olarak işler</td><td>Girişin güvenliği, kötüye kullanımı önlemek</td></tr>
   </table>
@@ -123,7 +128,7 @@
 
   <h3>"İlerlemeyi sıfırla" dersen</h3>
   <p>Giriş yapmışken ilerlemeyi sıfırlarsan <strong>hesabındaki ilerleme de sıfırlanır</strong>.
-  Hesabın ve Premium'un etkilenmez.</p>
+  Serin yalnızca sen seçersen sıfırlanır. Hesabın ve Premium'un etkilenmez.</p>
 
   <h2 id="premium">3. Premium abonelik</h2>
   <ul>
@@ -135,6 +140,8 @@
     uygulama, abonelik altyapısı <strong>RevenueCat</strong>'e <strong>kullanıcı kimliğini</strong>
     (rastgele hesap numarası), mağazanın satın alma kaydını, cihaz/işletim sistemi bilgisini ve
     IP adresini iletir. Adın ve e-postan RevenueCat'e gönderilmez.</li>
+    <li><strong>Hesap açmasan da:</strong> mobil uygulama, fiyat ve teklifleri göstermek için
+    RevenueCat'e rastgele üretilmiş anonim bir kimlik, cihaz bilgisi ve IP adresi iletir.</li>
     <li><strong>Ne için:</strong> yalnızca Premium'u açmak, yenilemeyi/iptali izlemek ve
     "Geri yükle" özelliği için. Reklam veya profil çıkarma amacıyla kullanılmaz.</li>
     <li>Premium aboneler reklam görmez; bu durumda <a href="#reklamlar">§4</a>'teki reklam
@@ -149,14 +156,14 @@
   <strong>Unity Ads</strong>) alabilir. Web/tarayıcı sürümünde reklam yoktur.</p>
   <ul>
     <li><strong>Hangi reklamlar:</strong> yalnızca (a) senin bir düğmeye basarak başlattığın
-    ödüllü videolar (enerji kazanmak, serini korumak) ve (b) bir dersi bitirdikten sonra çıkan,
-    <strong>atlanabilir</strong> ödüllü geçiş reklamı. Banner, açılış reklamı ve atlanamayan
+    ödüllü videolar (enerji kazanmak, serini korumak) ve (b) yoldaki bir adımı bitirince sunulan,
+    <strong>reddedebileceğin ve atlayabileceğin</strong> ödüllü reklam teklifi. Banner, açılış reklamı ve atlanamayan
     reklam <strong>kullanılmaz</strong>. Soruların arasında reklam çıkmaz.</li>
     <li><strong>Reklam izlemek zorunlu değildir.</strong> Tüm öğrenme içeriği reklam
     izlemeden kullanılabilir.</li>
     <li><strong>Ne paylaşılıyor:</strong> reklam gösterimi için Google ile iş ortağı reklam ağları,
-    cihazının <strong>reklam kimliğini</strong> (Android Advertising ID / iOS IDFA), IP adresini,
-    cihaz ve uygulama bilgisini işler. Geliştirici bu verileri görmez; yalnızca toplu gelir ve
+    cihazının <strong>reklam kimliğini</strong> (Android Advertising ID / iOS IDFA), IP adresini
+    (şehir gibi yaklaşık konumu gösterebilir), cihaz ve uygulama bilgisini işler. Geliştirici bu verileri görmez; yalnızca toplu gelir ve
     gösterim raporları alır.</li>
     <li><strong>Ne paylaşılmıyor:</strong> hesabın, e-postan, adın, öğrendiğin kelimeler,
     quiz sonuçların, XP'in ve serin reklam sistemine <strong>hiçbir şekilde</strong> aktarılmaz.</li>
@@ -195,7 +202,7 @@
 
   <h2 id="bildirimler">6. Bildirimler</h2>
   <ul>
-    <li>Günlük hatırlatma ve seri bildirimleri <strong>telefonunda üretilir</strong>; sunucudan
+    <li>Hatırlatma, seri ve enerji bildirimleri <strong>telefonunda üretilir</strong>; sunucudan
     gönderilmez. Bu yüzden bildirim belirteci (push token) oluşturulmaz ve hiçbir yere iletilmez.</li>
     <li>İzin, uygulama içinde "Hatırlat" dediğin anda istenir; vermezsen bildirim kurulmaz.
     Ayarlardan ya da telefonunun bildirim ayarlarından her zaman kapatabilirsin.</li>
@@ -210,14 +217,15 @@
     <li><strong>Abonelik kayıtların</strong> RevenueCat'te, abonelik durumunu doğrulamak için
     gerektiği sürece tutulur; abonelik durdurulduktan sonra silinir (mevzuat gereği saklanması
     zorunlu kayıtlar hariç).</li>
-    <li><strong>Hesap açmadan kullanıyorsan</strong> bizde saklanan bir verin yoktur.</li>
+    <li><strong>Hesap açmadan kullanıyorsan</strong> ilerlemene erişimimiz yoktur. Cihazın dışında
+    yalnızca gönderdiğin hata bildirimleri ve RevenueCat'teki anonim kimlik kalır (<a href="#premium">§3</a>).</li>
     <li><strong>Hata bildirimleri</strong> kimseyle eşleşmez; kelime düzeltildikten sonra
     silinebilir.</li>
   </ul>
 
   <h2 id="silme">8. Hesabını nasıl silersin?</h2>
   <p><strong>Uygulamanın içinden:</strong> <strong>Profil → Hesap → Hesabı sil</strong>.
-  İki adımda onay istenir, ardından Apple ya da Google ile kimliğini bir kez daha doğrularsın.
+  Onayın istenir; gerekirse Apple ya da Google ile kimliğini de doğrularsın.
   Silme için internet gerekir.</p>
   <p><strong>Uygulama elinde değilse:</strong> <a href="hesap-sil.html">Hesap silme sayfası</a>'ndaki
   adımları izleyebilir ya da <a href="mailto:mehmetmutlu0011@gmail.com">mehmetmutlu0011@gmail.com</a>
@@ -275,11 +283,12 @@
 
   <h2 id="olmayanlar">10. Yapmadıklarımız</h2>
   <ul>
-    <li><strong>Analitik ve takip yok.</strong> Hangi ekranı açtığın, ne kadar kaldığın ölçülmez.</li>
+    <li><strong>Kendi analitik aracımız yok.</strong> Hangi ekranı açtığın, ne kadar kaldığın ölçülmez.
+    Reklam hizmetleri yalnızca <a href="#reklamlar">§4</a>'te anlatılan verileri işler.</li>
     <li><strong>Takip çerezi yok.</strong></li>
-    <li><strong>Konum, kamera, mikrofon, rehber ve fotoğraf erişimi yok.</strong></li>
+    <li><strong>Uygulama konum, kamera, mikrofon, rehber ve fotoğraf izni istemez.</strong></li>
     <li><strong>Sunucudan gönderilen (push) bildirim yok.</strong></li>
-    <li><strong>Verini satmıyoruz</strong> ve reklam için kullanmıyoruz.</li>
+    <li><strong>Verini satmıyoruz;</strong> e-postanı, hesabını ve öğrenme verini reklam için kullanmıyoruz.</li>
     <li><strong>Başkasına görünen profil yok.</strong> Adın ve ilerlemen yalnızca sana görünür.</li>
   </ul>
 
