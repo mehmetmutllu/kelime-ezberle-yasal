@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0F172A">
+<meta name="description" content="Política de privacidade do Kaktus: quais dados são guardados, quem os trata, por quanto tempo e como exercer seus direitos pela LGPD.">
+<title>Política de privacidade – Kaktus</title>
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+<link rel="stylesheet" href="../../css/vendor/nunito.css">
+<link rel="stylesheet" href="../yasal.css">
+<script>
+  try {
+    var tema = localStorage.getItem('wm_theme');
+    if (tema !== 'light' && tema !== 'dark') {
+      tema = (window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark';
+    }
+    document.documentElement.dataset.theme = tema;
+    var m = document.querySelector('meta[name="theme-color"]');
+    if (m) m.setAttribute('content', tema === 'light' ? '#F0F2F5' : '#0F172A');
+  } catch (e) { document.documentElement.dataset.theme = 'dark'; }
+</script>
+</head>
+<body>
+<div class="yasal-sarmal">
+  <div class="yasal-ust">
+    <a class="yasal-geri" href="../../index.html">&larr; Voltar ao app</a>
+  </div>
+
+  <h1>Política de privacidade</h1>
+  <p class="yasal-tarih">Última atualização: 5 de novembro de 2026</p>
+
+  <div class="yasal-kutu">
+    <p><strong>Em resumo:</strong> você pode usar o Kaktus <strong>sem criar conta</strong>. Nesse caso,
+    seu progresso fica só no seu celular e não chega até nós.</p>
+    <p>Se quiser, você pode <strong>entrar com sua Conta Apple ou Conta do Google</strong>. Ao entrar, seu
+    e-mail, seu nome e seu progresso ficam salvos na sua conta, para você continuar de onde parou mesmo
+    se trocar de celular. Esses dados ficam no Firebase, do Google, em servidores em Frankfurt (Alemanha).
+    <strong>Para assinar o Premium é preciso ter conta.</strong></p>
+    <p>O app para celular <strong>mostra anúncios não personalizados</strong>. No Brasil, os anúncios vêm
+    apenas do Google, que trata dados técnicos, como o identificador de publicidade, o IP e informações do
+    aparelho. Seu e-mail, sua conta e seus dados de estudo <strong>não são compartilhados</strong> com fins de
+    publicidade. Não usamos ferramentas próprias de análise de uso e não vendemos seus dados.</p>
+    <p>Você pode excluir sua conta quando quiser, dentro do app: <strong>Perfil → Conta → Excluir conta</strong>.</p>
+  </div>
+
+  <h2 id="controlador">1. Quem é o responsável pelos seus dados</h2>
+  <p>O Kaktus é desenvolvido e publicado por <strong>Mehmet Mutlu</strong>, desenvolvedor individual
+  residente na Turquia, que é o controlador dos dados descritos aqui, nos termos da Lei Geral de Proteção
+  de Dados (LGPD, Lei nº 13.709/2018).</p>
+  <p><strong>Canal do titular:</strong> <a href="mailto:mehmetmutlu0011@gmail.com">mehmetmutlu0011@gmail.com</a>.
+  Use este e-mail para qualquer pedido ou dúvida sobre seus dados (<a href="#direitos">§12</a>). Como agente de
+  tratamento de pequeno porte, não indicamos um encarregado (Resolução CD/ANPD nº 2/2022); este canal cumpre essa função.</p>
+
+  <h2 id="sem-conta">2. Uso sem conta</h2>
+  <p>Sem entrar em uma conta, o app guarda as informações abaixo <strong>apenas no armazenamento do seu
+  celular (ou do navegador)</strong>. Esses dados não são enviados a nós e não temos acesso a eles. Se o backup
+  do sistema estiver ativado, ele segue as regras do Google ou da Apple.</p>
+
+  <div class="yasal-kaydir">
+  <table>
+    <tr><th>O que é guardado</th><th>Para que serve</th></tr>
+    <tr><td>Palavras aprendidas, histórico de acertos e erros, calendário de revisão</td><td>Calcular quando você deve revisar cada palavra</td></tr>
+    <tr><td>Progresso nas lições, XP do dia e sequência</td><td>Mostrar sua evolução</td></tr>
+    <tr><td>Sua lista de Palavras</td><td>Mostrar as palavras que você já estudou</td></tr>
+    <tr><td>Nível, idioma, tema, vibração e preferências de notificação</td><td>Abrir o app como você escolheu e programar o lembrete no horário definido</td></tr>
+    <tr><td>Energia e horário da última recarga</td><td>Calcular quando a energia volta</td></tr>
+    <tr><td>Proteções da sequência usadas no mês e número de revisões do dia</td><td>Aplicar os limites da versão gratuita</td></tr>
+    <tr><td>Contadores de anúncios (quantos foram exibidos no dia)</td><td>Aplicar os limites de frequência dos anúncios</td></tr>
+    <tr><td>Relatos de erro ainda não enviados</td><td>Enviar quando houver internet (<a href="#relato-de-erro">§6</a>)</td></tr>
+    <tr><td>Lista de palavras do curso</td><td>Funcionar sem internet</td></tr>
+  </table>
+  </div>
+  <p>Para apagar todos esses dados, desinstale o app (ou limpe os dados do site no navegador). A opção
+  <strong>"Redefinir progresso"</strong> apaga lições, XP, nível e a lista de Palavras; a sequência só é
+  redefinida se você escolher. Sem conta, não temos nenhuma cópia: o que foi apagado não pode ser recuperado.</p>
+  <p>Mesmo sem conta, alguns dados técnicos podem sair do aparelho: os dos anúncios, se você os permitir
+  (<a href="#anuncios">§5</a>), e, se você abrir a tela do Premium ou tocar em "Restaurar", os da consulta de ofertas à RevenueCat (<a href="#premium">§4</a>).
+  Relatos de erro só são enviados se você os fizer (<a href="#relato-de-erro">§6</a>).</p>
+
+  <h2 id="conta">3. Se você criar uma conta (opcional)</h2>
+  <p>A conta só pode ser criada no app para celular (Android e iPhone), com sua
+  <strong>Conta Apple</strong> ou <strong>Conta do Google</strong>. Você não cria uma senha separada, e
+  nunca vemos sua senha da Apple ou do Google.</p>
+
+  <h3>Quais informações são salvas?</h3>
+  <div class="yasal-kaydir">
+  <table>
+    <tr><th>Informação</th><th>De onde vem</th><th>Para que serve</th></tr>
+    <tr><td>Identificador de usuário (número de conta gerado aleatoriamente)</td><td>Gerado pelo Firebase ao criar a conta</td><td>Reconhecer sua conta e seus dados</td></tr>
+    <tr><td>E-mail</td><td>Apple ou Google. Se você ocultar o e-mail ao entrar com a Apple, recebemos o endereço de encaminhamento da Apple</td><td>Reconhecer sua conta, evitar uma segunda conta com o mesmo e-mail e confirmar sua identidade em pedidos como a exclusão</td></tr>
+    <tr><td>Nome</td><td>Apple ou Google (a Apple só informa no primeiro acesso; sem nome, aparece "Estudante"). Você pode alterá-lo no Perfil</td><td>Mostrar no seu Perfil. O nome fica visível <strong>só para você</strong></td></tr>
+    <tr><td>Como você entra, data de criação da conta e da última entrada, plataforma (Android ou iOS)</td><td>App</td><td>Fazer a conta funcionar e resolver problemas</td></tr>
+    <tr><td>Progresso: resultados de lições e seções, XP do dia, sequência e proteções usadas, nível, calendário de revisão, diálogos concluídos, histórico de respostas (qual palavra, tipo de pergunta, se acertou, quando)</td><td>Uso do app</td><td>Fazer o backup do progresso e permitir que você continue em outro celular</td></tr>
+    <tr><td>Sua lista de Palavras</td><td>Uso do app</td><td>Levar sua lista para outros celulares</td></tr>
+    <tr><td>Número de aparelho aleatório</td><td>Gerado pelo app (<strong>não é</strong> o identificador de publicidade)</td><td>Juntar o progresso sem confusão quando você estuda em dois celulares no mesmo dia</td></tr>
+    <tr><td>IP e informações do aparelho</td><td>Tratados pelo Google (Firebase) e pelos serviços de login da Apple e do Google quando você entra</td><td>Segurança da entrada e prevenção de abusos</td></tr>
+  </table>
+  </div>
+
+  <h3>Onde essas informações ficam?</h3>
+  <ul>
+    <li><strong>Seu progresso e seu perfil</strong> ficam no <strong>Cloud Firestore</strong>, do Google
+    Firebase, em servidores em <strong>Frankfurt (Alemanha, europe-west3)</strong>.</li>
+    <li><strong>Seu registro de entrada</strong> (identificador, e-mail, nome, como você entra) fica no
+    <strong>Firebase Authentication</strong>. O Google pode tratar esses registros em servidores em
+    diferentes países, <strong>incluindo os EUA</strong> (<a href="#transferencia">§11</a>).</li>
+    <li>Pelo app, só <strong>você</strong> acessa os dados da sua conta: as regras do servidor só permitem
+    que eles sejam lidos e alterados por quem entrou nessa conta. O desenvolvedor, na condição de
+    administrador do servidor, só consulta seus dados quando necessário para atender a um pedido seu (como
+    exclusão ou correção) ou resolver um problema técnico. Todas as conexões são criptografadas (HTTPS).</li>
+  </ul>
+
+  <h3>Para que esses dados não são usados?</h3>
+  <ul>
+    <li>Não são usados para publicidade, criação de perfil ou marketing. Não enviamos e-mails de marketing.</li>
+    <li>Não são mostrados a outros usuários. Nesta versão não existe perfil público, lista de amigos nem ranking.</li>
+    <li>Não são vendidos nem alugados.</li>
+  </ul>
+
+  <h3>Se você sair da conta</h3>
+  <p>Ao tocar em "Sair", seu progresso continua na sua conta e a <strong>cópia no celular é apagada</strong>
+  (o progresso, as Palavras e o Premium deixam de aparecer nesse aparelho). Ao entrar de novo com a mesma
+  conta, tudo volta. Se parte do progresso recente ainda não foi enviada (por falta de internet, por
+  exemplo), o app avisa; se você sair mesmo assim, essa parte pode se perder. Sair da conta não cancela a assinatura.</p>
+
+  <h3>Se você usar "Redefinir progresso"</h3>
+  <p>Com a conta conectada, ao redefinir o progresso, o <strong>progresso salvo na conta também é
+  redefinido</strong>. A sequência só é redefinida se você escolher. Sua conta e seu Premium não são afetados.</p>
+
+  <h2 id="premium">4. Assinatura Premium</h2>
+  <ul>
+    <li><strong>É preciso ter conta para assinar.</strong> A assinatura fica ligada à sua conta e funciona
+    em todos os celulares (Android ou iPhone) em que você entrar com ela.</li>
+    <li><strong>O pagamento é feito pela Apple (App Store) ou pelo Google (Google Play).</strong> Os dados
+    do seu cartão nunca chegam a nós nem ao app.</li>
+    <li><strong>O que é compartilhado:</strong> para verificar se a assinatura é válida, o app envia à
+    <strong>RevenueCat</strong> (serviço de gestão de assinaturas) seu <strong>identificador de usuário</strong>
+    (número de conta aleatório), o registro de compra da loja, informações do aparelho e do sistema
+    operacional e o IP. Seu nome e seu e-mail não são enviados à RevenueCat.</li>
+    <li><strong>Sem conta:</strong> o app para celular só se conecta à RevenueCat quando você abre a tela do Premium
+    ou toca em "Restaurar". Nesse momento, envia um identificador anônimo gerado aleatoriamente, informações do
+    aparelho e o IP, para consultar ofertas e preços. Antes disso, nada é enviado à RevenueCat.</li>
+    <li><strong>Para quê:</strong> somente para liberar o Premium, acompanhar renovação e cancelamento e
+    permitir a opção "Restaurar". Não é usado para publicidade nem para criar perfil.</li>
+    <li>Assinantes Premium não veem anúncios; por isso, o compartilhamento de dados de publicidade
+    descrito no <a href="#anuncios">§5</a> não acontece.</li>
+    <li>Se você excluir a conta, o acesso ao Premium termina. O que acontece com a assinatura depende da
+    loja (detalhes no <a href="#exclusao">§9</a>).</li>
+  </ul>
+
+  <h2 id="anuncios">5. Anúncios</h2>
+  <p>A <strong>versão para celular</strong> mostra anúncios por meio do Google AdMob. No Brasil, os anúncios vêm
+  apenas do Google. Fora do Brasil, o AdMob também pode buscar anúncios nas redes parceiras
+  <strong>Liftoff Monetize</strong> e <strong>Unity Ads</strong>. A versão web não tem anúncios.</p>
+  <ul>
+    <li><strong>Sua permissão:</strong> na versão em português, o sistema de anúncios só começa a funcionar depois que
+    você permite, na janela que aparece ao tocar pela primeira vez em um botão de anúncio. Sem essa permissão, nenhum
+    dado é enviado ao sistema de anúncios e você não ganha recompensas de anúncios. Você pode mudar sua decisão em
+    <em>Perfil → Configurações → Permissão de anúncios</em>. Se retirar a permissão, nenhum anúncio novo é exibido e o
+    sistema não é iniciado na próxima abertura do app.</li>
+    <li><strong>Quais anúncios:</strong> apenas vídeos com recompensa. Você os inicia tocando em um
+    botão (para ganhar energia ou proteger a sequência) ou aceitando a oferta que aparece ao fim de uma etapa do caminho, que
+    <strong>você pode recusar e pular</strong>. <strong>Não usamos</strong> banners,
+    anúncios de abertura nem anúncios que não possam ser pulados. Não há anúncios automáticos entre as perguntas: se a energia acabar durante uma lição, um anúncio só aparece se você tocar no botão.</li>
+    <li><strong>Assistir a anúncios não é obrigatório.</strong> Todo o conteúdo de estudo pode ser usado
+    sem assistir a anúncios.</li>
+    <li><strong>Anúncios não personalizados:</strong> na versão em português, o app pede anúncios não
+    personalizados para todos os usuários, porque não sabemos a idade de quem usa o app e a lei brasileira
+    proíbe o direcionamento de publicidade a crianças e adolescentes com base em perfil. No iPhone, o app
+    não pede a permissão de rastreamento nessa versão.</li>
+    <li><strong>O que é tratado mesmo assim:</strong> para entregar o anúncio, limitar a frequência, medir a
+    exibição e evitar fraudes, o Google e as redes parceiras podem tratar o <strong>identificador de
+    publicidade</strong> do aparelho (quando disponível), o IP (que pode indicar sua localização aproximada, como a
+    cidade) e informações do aparelho e do app. O
+    desenvolvedor não vê esses dados; recebe apenas relatórios gerais de receita e exibições.</li>
+    <li><strong>O que nunca é compartilhado:</strong> sua conta, seu e-mail, seu nome, as palavras que você
+    aprendeu, seus resultados nos exercícios, seu XP e sua sequência <strong>não são enviados</strong> ao
+    sistema de anúncios.</li>
+    <li><strong>Como limitar:</strong> no Android, você pode excluir ou redefinir o identificador de publicidade em
+    <em>Configurações → Google → Anúncios</em>. No iPhone, você controla o rastreamento em
+    <em>Ajustes → Privacidade e Segurança → Rastreamento</em>. Os nomes podem variar conforme o aparelho.</li>
+    <li><strong>Conteúdo dos anúncios:</strong> a classificação de conteúdo e as categorias bloqueadas
+    (como jogos de azar, álcool e namoro) são definidas nas configurações do AdMob. Como a classificação
+    do Google é automática, não é possível garantir que nunca apareça um anúncio inadequado. Se isso
+    acontecer, avise-nos.</li>
+    <li>Políticas de privacidade dos parceiros:
+    <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google</a> ·
+    <a href="https://liftoff.ai/privacy-policy/" target="_blank" rel="noopener">Liftoff</a> ·
+    <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">Unity</a></li>
+  </ul>
+
+  <h2 id="relato-de-erro">6. Relato de erro</h2>
+  <p>Se você encontrar um erro na tradução, na frase de exemplo ou na grafia de uma palavra, pode nos
+  avisar dentro do app. É totalmente opcional.</p>
+  <ul>
+    <li><strong>O que é enviado:</strong> a palavra relatada (número, texto e significado), o tipo de erro
+    escolhido, sua observação (se escrever), a tela de onde você relatou, o tipo de pergunta e as respostas
+    correta e escolhida (se relatar a partir de um exercício), a versão do app, a plataforma e a data do envio.</li>
+    <li><strong>O que não é enviado:</strong> nome, e-mail, identificador de conta ou de usuário,
+    identificador do aparelho, identificador de publicidade e seu progresso. Não associamos o relato a você.</li>
+    <li><strong>Para onde vai:</strong> para uma área separada no Google Firebase (Cloud Firestore,
+    Frankfurt), que só o desenvolvedor pode ler. Ao receber o envio, o Google vê tecnicamente o IP, mas essa
+    informação não é gravada no relato.</li>
+    <li>O relato é usado apenas para corrigir o conteúdo. Pedimos que você não escreva dados pessoais na observação.</li>
+  </ul>
+
+  <h2 id="notificacoes">7. Notificações</h2>
+  <ul>
+    <li>Os lembretes e as notificações de sequência e de energia são <strong>gerados no seu celular</strong>,
+    não enviados por um servidor. Por isso, nenhum token de notificação (push token) é criado ou transmitido.</li>
+    <li>A permissão é pedida quando você ativa o lembrete no app. Sem permissão, nenhuma notificação é
+    programada. Você pode desativar quando quiser nas configurações do app ou do celular.</li>
+    <li>Não enviamos notificações de anúncios ou promoções.</li>
+  </ul>
+
+  <h2 id="retencao">8. Por quanto tempo guardamos os dados</h2>
+  <ul>
+    <li><strong>Dados da conta</strong> (registro de acesso, perfil, progresso): enquanto a conta existir.
+    São apagados quando você exclui a conta (<a href="#exclusao">§9</a>); cópias em backups técnicos do
+    fornecedor são removidas em até aproximadamente 180 dias, segundo os prazos de exclusão dele.</li>
+    <li><strong>Registros de assinatura:</strong> ficam na RevenueCat pelo tempo necessário para verificar
+    a assinatura e são apagados depois que ela é encerrada, exceto registros que a lei obrigue a guardar.</li>
+    <li><strong>Uso sem conta:</strong> não temos acesso ao seu progresso. Fora do aparelho ficam apenas os relatos de
+    erro que você enviar e, se você abriu a tela do Premium ou tocou em "Restaurar", o identificador anônimo na
+    RevenueCat (<a href="#premium">§4</a>).</li>
+    <li><strong>Relatos de erro:</strong> não são associados a ninguém e são excluídos depois que a
+    palavra é corrigida ou quando deixam de ser necessários para corrigir o conteúdo.</li>
+  </ul>
+
+  <h2 id="exclusao">9. Como excluir sua conta</h2>
+  <p><strong>Dentro do app:</strong> <strong>Perfil → Conta → Excluir conta</strong>. O app pede sua
+  confirmação e, se necessário, você confirma sua identidade com a Apple ou o Google. É preciso ter internet.</p>
+  <p><strong>Sem o app em mãos:</strong> siga os passos da <a href="excluir-conta.html">página de exclusão
+  de conta</a> ou escreva para <a href="mailto:mehmetmutlu0011@gmail.com">mehmetmutlu0011@gmail.com</a> a partir do
+  e-mail da sua conta. Pedidos por e-mail são concluídos em até <strong>30 dias</strong>.</p>
+
+  <h3>Quando a conta é excluída</h3>
+  <ul>
+    <li>Tudo o que está na conta é excluído: progresso, sequência, XP, lista de Palavras, nome e registro de entrada.</li>
+    <li><strong>O progresso no celular também é excluído</strong> e o app volta à tela inicial. Se quiser,
+    você pode recomeçar sem conta.</li>
+    <li>Se você entrou com a Apple, a autorização de acesso na Apple também é revogada.</li>
+    <li>Os dados excluídos não podem ser recuperados. Cópias em backups técnicos do nosso fornecedor de
+    servidores são excluídas definitivamente em até aproximadamente 180 dias, segundo os prazos dele. Se a lei obrigar a guardar algum registro,
+    somente ele fica guardado, pelo tempo exigido.</li>
+  </ul>
+
+  <h3>O que acontece com a assinatura?</h3>
+  <ul>
+    <li><strong>Android (Google Play):</strong> ao excluir a conta, sua assinatura é
+    <strong>cancelada e os dias não usados são reembolsados.</strong> Você não precisa fazer mais nada. Nos 7 dias do
+    direito de arrependimento, você pode pedir a devolução integral (<a href="termos-de-uso.html#premium">Termos de uso, §10</a>).</li>
+    <li><strong>iPhone (App Store):</strong> a Apple não permite que desativemos a renovação automática por
+    você. Cancele na Apple antes de concluir a exclusão. Na tela de exclusão, o botão <strong>"Cancelar Premium"</strong> abre a página de assinaturas da
+    Apple. O acesso ao Premium termina quando a conta é excluída, mas <strong>se você não cancelar a
+    assinatura na Apple, as cobranças da Apple continuam.</strong> Você pode pedir reembolso do período não
+    usado à Apple (<a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>).</li>
+    <li><strong>Registros de pagamento:</strong> como a Apple e o Google recebem o pagamento, as notas e os
+    registros ficam com eles, conforme as obrigações legais deles. Seu registro de assinatura na RevenueCat
+    é apagado depois que a assinatura é encerrada, exceto se a lei obrigar a guardar algum registro de
+    transação, somente pelo tempo exigido.</li>
+  </ul>
+
+  <h2 id="bases-legais">10. Por que tratamos seus dados (bases legais da LGPD)</h2>
+  <p>A tabela mostra a finalidade de cada tratamento e a base legal correspondente (LGPD, Art. 7º).</p>
+  <div class="yasal-kaydir">
+  <table>
+    <tr><th>Dados</th><th>Finalidade</th><th>Base legal</th></tr>
+    <tr><td>Identificador, nome, e-mail, como você entra</td><td>Criar e reconhecer a conta, mostrar seu perfil, evitar contas duplicadas e confirmar sua identidade em pedidos</td><td>Execução de contrato (Art. 7º, V)</td></tr>
+    <tr><td>Progresso, lista de Palavras, datas de entrada, plataforma, número de aparelho aleatório</td><td>Fazer backup, levar o progresso para outros aparelhos e calcular as revisões</td><td>Execução de contrato (Art. 7º, V)</td></tr>
+    <tr><td>Identificador de usuário, registro de compra da loja, situação da assinatura</td><td>Liberar o Premium, acompanhar renovação e cancelamento, restaurar compras e encerrar o acesso ao Premium quando a conta é excluída (o cancelamento na App Store é feito por você)</td><td>Execução de contrato (Art. 7º, V) · Obrigação legal, para registros que a lei exija (Art. 7º, II)</td></tr>
+    <tr><td>IP e informações do aparelho ao entrar na conta</td><td>Segurança da entrada e prevenção de abusos</td><td>Legítimo interesse (Art. 7º, IX)</td></tr>
+    <tr><td>Identificador de publicidade (quando disponível), IP, informações do aparelho e do app</td><td>Exibir anúncios não personalizados, limitar a frequência, medir exibições e prevenir fraudes (só para quem usa a versão gratuita e permite anúncios)</td><td>Consentimento (Art. 7º, I), que você pode retirar a qualquer momento nas Configurações</td></tr>
+    <tr><td>Identificador anônimo, IP e informações do aparelho enviados à RevenueCat sem conta, quando você abre a tela do Premium ou toca em "Restaurar"</td><td>Consultar ofertas e preços do Premium a seu pedido</td><td>Procedimentos preliminares a um contrato, a seu pedido (Art. 7º, V)</td></tr>
+    <tr><td>Relato de erro, sem identificação, e o IP visto tecnicamente pelo Google no envio</td><td>Corrigir o conteúdo</td><td>Legítimo interesse (Art. 7º, IX)</td></tr>
+  </table>
+  </div>
+  <p>Você pode se opor ao tratamento baseado em legítimo interesse. Para retirar a permissão de anúncios, use as
+  Configurações do app (<a href="#anuncios">§5</a>); para outros pedidos, escreva para o
+  <a href="#controlador">canal do titular</a>. Os anúncios são a forma de manter o app gratuito; para não vê-los, é
+  possível assinar o Premium.</p>
+  <p>Não tomamos decisões sobre você de forma exclusivamente automatizada com efeito jurídico ou
+  semelhante. O calendário de revisão apenas organiza o seu estudo.</p>
+
+  <h2 id="transferencia">11. Quem trata os dados e transferência internacional</h2>
+  <p>O app funciona com os prestadores abaixo. Nenhum deles trata esses dados só no Brasil e o controlador está na
+  Turquia; por isso, seus dados são transferidos para fora do país. O desenvolvedor só acessa dados da conta a partir
+  da Turquia para atender a pedidos seus, dar suporte e resolver problemas técnicos ou de segurança. Parte desses
+  prestadores (como os serviços de anúncios) também trata alguns dados por conta própria, conforme suas
+  políticas.</p>
+  <div class="yasal-kaydir">
+  <table>
+    <tr><th>Serviço</th><th>Para quê</th><th>Onde</th></tr>
+    <tr><td><strong>Google Firebase</strong> (Authentication + Cloud Firestore) — Google LLC / Google Ireland Ltd.</td><td>Entrada na conta, backup dos dados da conta e relatos de erro</td><td>Firestore: Frankfurt (Alemanha). Registros de entrada: servidores do Google, incluindo os EUA</td></tr>
+    <tr><td><strong>Entrar com a Apple</strong> — Apple Inc.</td><td>Entrar com a Conta Apple</td><td>Servidores da Apple</td></tr>
+    <tr><td><strong>Entrar com o Google</strong> — Google LLC</td><td>Entrar com a Conta do Google</td><td>Servidores do Google</td></tr>
+    <tr><td><strong>RevenueCat</strong> — RevenueCat, Inc.</td><td>Verificação da assinatura Premium</td><td>EUA</td></tr>
+    <tr><td><strong>App Store / Google Play</strong> — Apple Inc. / Google LLC</td><td>Pagamento do Premium</td><td>Servidores da Apple / do Google</td></tr>
+    <tr><td><strong>Google AdMob</strong> — Google LLC / Google Ireland Ltd.</td><td>Exibição de anúncios (só para quem usa a versão gratuita)</td><td>Servidores do Google</td></tr>
+    <tr><td><strong>Liftoff Monetize</strong> — Liftoff Mobile, Inc. (Vungle)</td><td>Exibição de anúncios pelo AdMob, fora do Brasil</td><td>Servidores da Liftoff, incluindo os EUA</td></tr>
+    <tr><td><strong>Unity Ads</strong> — Unity Technologies</td><td>Exibição de anúncios pelo AdMob, fora do Brasil</td><td>Servidores da Unity, incluindo os EUA</td></tr>
+    <tr><td><strong>Cloudflare</strong> — Cloudflare, Inc.</td><td>Hospedagem de páginas web; cancelamento e reembolso da assinatura Android ao excluir a conta</td><td>Servidores da Cloudflare</td></tr>
+  </table>
+  </div>
+  <p><strong>Com que base (LGPD, Art. 33):</strong> os dados guardados na União Europeia seguem a decisão
+  da ANPD que reconhece o nível de proteção adequado da UE (Resolução CD/ANPD nº 32/2026). Para os demais
+  países, a transferência é feita para executar o contrato com você, quando esse for o caso (Art. 33, IX, combinado
+  com o Art. 7º, V). No Google Firebase, aplicam-se também as cláusulas-padrão contratuais aprovadas pela ANPD,
+  previstas nos termos de proteção de dados do Google Cloud (Art. 33, II). Os dados técnicos de anúncios, se você os permitir, são coletados diretamente do seu
+  aparelho pelo Google, que, nesse tratamento, atua como controlador independente e pode tratá-los fora do Brasil, conforme a política dele (§5). Se quiser mais detalhes sobre uma transferência ou o texto dessas cláusulas, escreva para o
+  <a href="#controlador">canal do titular</a>.</p>
+  <p>A fonte (Nunito) e os ícones (Remix Icon) fazem parte do app; não são baixados de uma rede de conteúdo.</p>
+
+  <h2 id="direitos">12. Seus direitos como titular (LGPD, Art. 18)</h2>
+  <p>Você pode pedir, de graça, a qualquer momento:</p>
+  <ul>
+    <li>confirmação de que tratamos seus dados;</li>
+    <li>acesso aos dados;</li>
+    <li>correção de dados incompletos, inexatos ou desatualizados;</li>
+    <li>anonimização, bloqueio ou eliminação de dados desnecessários, excessivos ou tratados em desacordo com a lei;</li>
+    <li>portabilidade dos dados a outro fornecedor;</li>
+    <li>eliminação dos dados tratados com seu consentimento;</li>
+    <li>informação sobre com quem compartilhamos seus dados;</li>
+    <li>informação sobre a possibilidade de não dar consentimento e o que acontece nesse caso;</li>
+    <li>revogação do consentimento, quando ele for a base do tratamento;</li>
+    <li>oposição a um tratamento que descumpra a lei.</li>
+  </ul>
+  <p>Você pode alterar seu nome e excluir sua conta pelo próprio app, sem precisar fazer um pedido. Para
+  o restante, escreva para <a href="mailto:mehmetmutlu0011@gmail.com">mehmetmutlu0011@gmail.com</a>, de preferência a
+  partir do e-mail da sua conta. Confirmamos de imediato o recebimento e, em formato simplificado, informamos se tratamos seus dados assim que verificarmos que o pedido é seu. A declaração completa de
+  confirmação e acesso é enviada em até <strong>15 dias</strong>; os demais pedidos são concluídos em até <strong>30 dias</strong>.</p>
+  <p>Você também pode apresentar reclamação à <strong>Agência Nacional de Proteção de Dados (ANPD)</strong>:
+  <a href="https://www.gov.br/anpd" target="_blank" rel="noopener">gov.br/anpd</a>.</p>
+
+  <h2 id="fora">13. O que não fazemos</h2>
+  <ul>
+    <li><strong>Sem ferramentas próprias de análise.</strong> Não medimos quais telas você abre nem quanto tempo fica nelas. Os serviços de anúncios tratam apenas o que está descrito no <a href="#anuncios">§5</a>.</li>
+    <li><strong>Sem cookies de rastreamento.</strong></li>
+    <li><strong>O app não pede permissão de localização, câmera, microfone, contatos e fotos.</strong></li>
+    <li><strong>Sem notificações enviadas por servidor (push).</strong></li>
+    <li><strong>Não vendemos seus dados</strong> e não usamos seu e-mail, sua conta nem seus dados de estudo para publicidade.</li>
+    <li><strong>Sem perfil visível para outras pessoas.</strong> Seu nome e seu progresso só aparecem para você.</li>
+  </ul>
+
+  <h2 id="criancas">14. Crianças e adolescentes</h2>
+  <p>O Kaktus é um app de estudo para o público em geral e <strong>não é destinado a menores de 13
+  anos</strong>. Quem tem menos de 13 anos não deve criar uma conta. Se soubermos que uma criança criou uma conta, ou se você nos
+  avisar em <a href="mailto:mehmetmutlu0011@gmail.com">mehmetmutlu0011@gmail.com</a>, excluímos a conta e os dados, exceto o que a
+  lei obrigue a guardar.</p>
+  <p>Se você tem de 13 a 17 anos, use o app com o conhecimento dos seus responsáveis. Eles também podem
+  fazer pedidos sobre seus dados pelo mesmo e-mail. O app não pergunta a idade, não tem bate-papo nem perfil
+  público e não mostra anúncios personalizados na versão em português.</p>
+  <p>A classificação dos anúncios e as categorias bloqueadas são definidas no AdMob, mas isso não garante
+  que todo anúncio seja adequado a todas as idades. Para evitar que uma criança ou um adolescente veja anúncios, use os controles
+  parentais do aparelho.</p>
+
+  <h2>15. Se esta política mudar</h2>
+  <p>Se um novo recurso precisar de mais dados, este texto é atualizado <strong>antes de o recurso ser
+  lançado</strong> e a data acima muda. Se uma mudança depender do seu consentimento, pedimos no app.</p>
+
+  <div class="yasal-alt">
+    <p>Kaktus · Desenvolvedor: Mehmet Mutlu, Turquia ·
+    <a href="termos-de-uso.html">Termos de uso</a> ·
+    <a href="excluir-conta.html">Exclusão de conta</a></p>
+  </div>
+</div>
+</body>
+</html>
