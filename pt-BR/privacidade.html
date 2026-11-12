@@ -28,7 +28,7 @@
   </div>
 
   <h1>Política de privacidade</h1>
-  <p class="yasal-tarih">Última atualização: 11 de novembro de 2026</p>
+  <p class="yasal-tarih">Última atualização: 12 de novembro de 2026</p>
 
   <div class="yasal-kutu">
     <p><strong>Em resumo:</strong> você pode usar o Kaktus <strong>sem criar conta</strong>. Nesse caso,
@@ -78,7 +78,8 @@
   redefinida se você escolher. Sem conta, não temos nenhuma cópia: o que foi apagado não pode ser recuperado.</p>
   <p>Mesmo sem conta, alguns dados técnicos podem sair do aparelho: os dos anúncios, se você os permitir
   (<a href="#anuncios">§5</a>), e, se você abrir a tela do Premium ou tocar em "Restaurar", os da consulta de ofertas à RevenueCat (<a href="#premium">§4</a>).
-  Relatos de erro só são enviados se você os fizer (<a href="#relato-de-erro">§6</a>).</p>
+  Relatos de erro só são enviados se você os fizer (<a href="#relato-de-erro">§6</a>). Quando você termina o teste
+  Nível de vocabulário, suas respostas são enviadas sem identificação (<a href="#teste-de-nivel">§6</a>).</p>
 
   <h2 id="conta">3. Se você criar uma conta (opcional)</h2>
   <p>A conta só pode ser criada no app para celular (Android e iPhone), com sua
@@ -207,6 +208,22 @@
     <li>O relato é usado apenas para corrigir o conteúdo. Pedimos que você não escreva dados pessoais na observação.</li>
   </ul>
 
+  <h3 id="teste-de-nivel">Teste Nível de vocabulário</h3>
+  <p>Quando você termina o teste Nível de vocabulário, as palavras perguntadas e as suas respostas (quais palavras
+  você sabia ou não), o seu resultado, o idioma e a versão do app são guardados sem identificação, para melhorar
+  o teste. Esse registro não contém nenhuma informação que identifique você ou o seu aparelho.</p>
+  <ul>
+    <li><strong>O que é enviado:</strong> as palavras perguntadas e o nível de cada uma, a sua resposta a cada
+    pergunta (certa, errada ou "Não sei"), o seu resultado, o idioma e a versão do app, a plataforma e o dia do
+    teste (sem horário).</li>
+    <li><strong>O que não é enviado:</strong> nome, e-mail, identificador de conta ou de usuário,
+    identificador do aparelho, identificador de publicidade e seu progresso. Não associamos o registro a você.
+    Um teste deixado pela metade não é enviado.</li>
+    <li><strong>Para onde vai:</strong> como os relatos de erro, para uma área separada no Google Firebase
+    (Cloud Firestore, Frankfurt), que só o desenvolvedor pode ler. Ao receber o envio, o Google vê tecnicamente
+    o IP, mas essa informação não é gravada no registro.</li>
+  </ul>
+
   <h2 id="notificacoes">7. Notificações</h2>
   <ul>
     <li>Os lembretes e as notificações de sequência e de energia são <strong>gerados no seu celular</strong>,
@@ -224,10 +241,12 @@
     <li><strong>Registros de assinatura:</strong> ficam na RevenueCat pelo tempo necessário para verificar
     a assinatura e são apagados depois que ela é encerrada, exceto registros que a lei obrigue a guardar.</li>
     <li><strong>Uso sem conta:</strong> não temos acesso ao seu progresso. Fora do aparelho ficam apenas os relatos de
-    erro que você enviar e, se você abriu a tela do Premium ou tocou em "Restaurar", o identificador anônimo na
+    erro que você enviar, os registros sem identificação do teste Nível de vocabulário e, se você abriu a tela do Premium ou tocou em "Restaurar", o identificador anônimo na
     RevenueCat (<a href="#premium">§4</a>).</li>
     <li><strong>Relatos de erro:</strong> não são associados a ninguém e são excluídos depois que a
     palavra é corrigida ou quando deixam de ser necessários para corrigir o conteúdo.</li>
+    <li><strong>Registros do teste Nível de vocabulário:</strong> não são associados a ninguém e são guardados
+    enquanto forem necessários para melhorar o teste.</li>
   </ul>
 
   <h2 id="exclusao">9. Como excluir sua conta</h2>
@@ -276,6 +295,7 @@
     <tr><td>Identificador de publicidade (quando disponível), IP, informações do aparelho e do app</td><td>Exibir anúncios não personalizados, limitar a frequência, medir exibições e prevenir fraudes (só para quem usa a versão gratuita e permite anúncios)</td><td>Consentimento (Art. 7º, I), que você pode retirar a qualquer momento nas Configurações</td></tr>
     <tr><td>Identificador anônimo, IP e informações do aparelho enviados à RevenueCat sem conta, quando você abre a tela do Premium ou toca em "Restaurar"</td><td>Consultar ofertas e preços do Premium a seu pedido</td><td>Procedimentos preliminares a um contrato, a seu pedido (Art. 7º, V)</td></tr>
     <tr><td>Relato de erro, sem identificação, e o IP visto tecnicamente pelo Google no envio</td><td>Corrigir o conteúdo</td><td>Legítimo interesse (Art. 7º, IX)</td></tr>
+    <tr><td>Respostas do teste Nível de vocabulário, sem identificação, e o IP visto tecnicamente pelo Google no envio</td><td>Melhorar o teste</td><td>Legítimo interesse (Art. 7º, IX)</td></tr>
   </table>
   </div>
   <p>Você pode se opor ao tratamento baseado em legítimo interesse. Para retirar a permissão de anúncios, use as
@@ -294,7 +314,7 @@
   <div class="yasal-kaydir">
   <table>
     <tr><th>Serviço</th><th>Para quê</th><th>Onde</th></tr>
-    <tr><td><strong>Google Firebase</strong> (Authentication + Cloud Firestore) — Google LLC / Google Ireland Ltd.</td><td>Entrada na conta, backup dos dados da conta e relatos de erro</td><td>Firestore: Frankfurt (Alemanha). Registros de entrada: servidores do Google, incluindo os EUA</td></tr>
+    <tr><td><strong>Google Firebase</strong> (Authentication + Cloud Firestore) — Google LLC / Google Ireland Ltd.</td><td>Entrada na conta, backup dos dados da conta, relatos de erro e registros sem identificação do teste Nível de vocabulário</td><td>Firestore: Frankfurt (Alemanha). Registros de entrada: servidores do Google, incluindo os EUA</td></tr>
     <tr><td><strong>Entrar com a Apple</strong> — Apple Inc.</td><td>Entrar com a Conta Apple</td><td>Servidores da Apple</td></tr>
     <tr><td><strong>Entrar com o Google</strong> — Google LLC</td><td>Entrar com a Conta do Google</td><td>Servidores do Google</td></tr>
     <tr><td><strong>RevenueCat</strong> — RevenueCat, Inc.</td><td>Verificação da assinatura Premium</td><td>EUA</td></tr>
