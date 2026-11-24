@@ -33,7 +33,7 @@
 
 
   <h1>Gizlilik Politikası</h1>
-  <p class="yasal-tarih">Son güncelleme: 12 Kasım 2026</p>
+  <p class="yasal-tarih">Son güncelleme: 24 Kasım 2026</p>
 
   <div class="yasal-kutu">
     <p><strong>Kısaca:</strong> Kaktus'u <strong>hesap açmadan</strong> kullanabilirsin.
@@ -77,7 +77,8 @@
   <p>Hesap açmasan da bazı teknik veriler cihazından çıkar: reklam verileri (<a href="#reklamlar">§4</a>)
   ve fiyat ile teklif sorgusu için RevenueCat'e giden bilgiler (<a href="#premium">§3</a>). Hata
   bildirimi yalnızca sen gönderirsen iletilir (<a href="#hata-bildirimi">§5</a>). Kelime Seviyem testini
-  bitirdiğinde cevapların kimliksiz olarak gönderilir (<a href="#seviye-testi">§5</a>).</p>
+  bitirdiğinde cevapların kimliksiz olarak gönderilir; "Bizi nereden duydun?" sorusunda
+  seçtiğin cevap da kimliksiz iletilir (<a href="#seviye-testi">§5</a>).</p>
 
   <h2 id="hesap">2. Hesap açarsan (isteğe bağlı)</h2>
   <p>Hesap yalnızca mobil uygulamada (Android ve iPhone) açılabilir ve
@@ -218,6 +219,12 @@
     olarak IP adresini görür; bu bilgi kayda yazılmaz.</li>
   </ul>
 
+  <h3 id="kaynak-sorusu">"Bizi nereden duydun?" sorusu</h3>
+  <p>İlk dersinden sonra bir kez sorulur ve atlanabilir. Bir seçeneğe dokunursan seçtiğin cevap,
+  uygulama dili ve sürümü, platform ve gün kimliksiz olarak aynı yere (Google Firebase, Frankfurt)
+  kaydedilir. Ad, e-posta, hesap ya da cihaz kimliği gönderilmez. Google isteği karşılarken teknik
+  olarak IP adresini görür; bu bilgi kayda yazılmaz. Atlarsan hiçbir şey gönderilmez.</p>
+
   <h2 id="bildirimler">6. Bildirimler</h2>
   <ul>
     <li>Hatırlatma, seri ve enerji bildirimleri <strong>telefonunda üretilir</strong>; sunucudan
@@ -236,11 +243,12 @@
     gerektiği sürece tutulur; abonelik durdurulduktan sonra silinir (mevzuat gereği saklanması
     zorunlu kayıtlar hariç).</li>
     <li><strong>Hesap açmadan kullanıyorsan</strong> ilerlemene erişimimiz yoktur. Cihazın dışında
-    yalnızca gönderdiğin hata bildirimleri, kimliksiz Kelime Seviyem test kayıtları ve RevenueCat'teki anonim kimlik kalır (<a href="#premium">§3</a>).</li>
+    yalnızca gönderdiğin hata bildirimleri, kimliksiz Kelime Seviyem test kayıtları, "Bizi nereden duydun?" cevabın ve RevenueCat'teki anonim kimlik kalır (<a href="#premium">§3</a>).</li>
     <li><strong>Hata bildirimleri</strong> kimseyle eşleşmez; kelime düzeltildikten sonra
     silinebilir.</li>
     <li><strong>Kelime Seviyem test kayıtları</strong> kimseyle eşleşmez; testi geliştirmek için
-    gerektiği sürece saklanır.</li>
+    gerektiği sürece saklanır. <strong>"Bizi nereden duydun?" cevapları</strong> da kimseyle eşleşmez;
+    uygulamanın nereden duyulduğunu anlamak için gerektiği sürece saklanır.</li>
   </ul>
 
   <h2 id="silme">8. Hesabını nasıl silersin?</h2>
@@ -287,7 +295,7 @@
   <div class="yasal-kaydir">
   <table>
     <tr><th>Hizmet</th><th>Ne için</th><th>Nerede</th></tr>
-    <tr><td><strong>Google Firebase</strong> (Authentication + Cloud Firestore) — Google LLC / Google Ireland Ltd.</td><td>Giriş, hesabındaki verilerin yedeği, gönderdiğin hata bildirimleri ve kimliksiz Kelime Seviyem test kayıtları</td><td>Firestore: Frankfurt (Almanya). Giriş kayıtları: ABD dahil Google sunucuları</td></tr>
+    <tr><td><strong>Google Firebase</strong> (Authentication + Cloud Firestore) — Google LLC / Google Ireland Ltd.</td><td>Giriş, hesabındaki verilerin yedeği, gönderdiğin hata bildirimleri kimliksiz Kelime Seviyem test kayıtları ve "Bizi nereden duydun?" cevapları</td><td>Firestore: Frankfurt (Almanya). Giriş kayıtları: ABD dahil Google sunucuları</td></tr>
     <tr><td><strong>Apple ile giriş</strong> — Apple Inc.</td><td>Apple hesabınla giriş</td><td>Apple sunucuları</td></tr>
     <tr><td><strong>Google ile giriş</strong> — Google LLC</td><td>Google hesabınla giriş</td><td>Google sunucuları</td></tr>
     <tr><td><strong>RevenueCat</strong> — RevenueCat, Inc.</td><td>Premium aboneliğin doğrulanması</td><td>ABD</td></tr>
